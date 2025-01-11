@@ -6,7 +6,7 @@ import logo_levis from "../assets/logo_levis.png";
 import logo_obey from "../assets/logo_obey.svg";
 import logo_shopify from "../assets/logo_shopify.svg";
 
-import ProductCard from "./ProductCard.jsx"
+import ProductCard from "./ProductCard.jsx";
 const Hero = () => {
   return (
     <div className="hero">
@@ -14,8 +14,10 @@ const Hero = () => {
         <div>
           <div className="hero-top-box"></div>
           <div className="hero-top-box"></div>
-          <p className="hero-top-info">Live for innovative fashion! </p>
-          <button>SHOP NOW</button>
+          <div className="hero-top-info">
+            <p>Live for innovative fashion!</p>
+            <button>SHOP NOW</button>
+          </div>
         </div>
         <img
           src={hero}

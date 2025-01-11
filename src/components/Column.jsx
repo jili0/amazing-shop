@@ -8,7 +8,6 @@ const Column = () => {
       <div className="column-yellow">
         <div className="column-yellow-top">
           <svg
-            width="50"
             class="icon"
             viewBox="0 0 1024 1024"
             version="1.1"

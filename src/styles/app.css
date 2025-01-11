@@ -1,10 +1,12 @@
 /* Header */
 header {
   height: 10rem;
+  margin: -1rem;
+  padding: 0.5rem calc(0.2rem + 2vw);
 }
 
 .header-wave {
-  width: calc(20rem + 25vw);
+  width: calc(20rem + 35vw);
   position: absolute;
   top: 0;
   left: 0;
@@ -20,6 +22,21 @@ nav > ul {
   font-family: "Poppins-ExtraLight", sans-serif;
 }
 
+nav li:hover {
+  position: relative;
+}
+
+nav li:hover::after {
+  content: "";
+  background-color: #e5c643;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  width: 100%;
+}
+
 /* Main */
 main {
   margin-bottom: 2rem;
@@ -28,19 +45,20 @@ main {
 .hero {
   margin-top: -2rem;
   margin-bottom: 2rem;
-  margin-left: calc(.5rem + 1vw);
-  min-height: 120vh;
-  width: calc(15rem + 40vw);
+  margin-left: calc(0.5rem + 1vw);
+  min-height: calc(115vh + 8vw);
+  width: calc(12rem + 38vw);
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 2px 2px 12px 1px rgba(2, 2, 2, 0.1);
-  padding: 1px;
+  padding-block: calc(1rem + 1vw);
+  position: relative;
 }
 
 .hero-top {
-  height: 55vh;
+  height: calc(60vh - 2vw);
   background-color: #eee;
-  margin: calc(1rem + 2vw);
+  margin: calc(1.5rem - 2vw) calc(1rem + 2vw) calc(3rem - 2vw);
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -49,8 +67,8 @@ main {
 }
 
 .hero-top-box {
-  width: calc(1rem + 15vw);
-  height: calc(1rem + 2vw);
+  width: calc(1rem + 12vw);
+  height: calc(1rem + 1vw);
   background-color: #e5c643;
   margin-bottom: 1rem;
   margin-left: calc(1rem + 2vw);
@@ -63,18 +81,19 @@ main {
 }
 
 .hero-top-info {
-  margin-top: .6rem;
   position: absolute;
-  left: calc(4px + 6vw);
-  font-size: calc(4px + 2vw);
-  white-space: nowrap;
+  left: calc(4px + 2vw);
+  top: calc(10rem + 4vw);
+  display: flex;
+  flex-direction: column;
+  gap: calc(0.5rem + 1vw);
+  align-items: center;
+  font-size: calc(8px + 1vw);
   font-family: "Poppins-Bold", sans-serif;
 }
 
-.hero-top button {
-  position: absolute;
-  left: calc(4px + 6vw);
-  bottom: calc(4px + 6vh);
+.hero-top-info > button {
+  width: fit-content;
   font-size: calc(8px + 1vw);
   color: white;
   background-color: red;
@@ -110,8 +129,13 @@ main {
 }
 
 .hero-bottom {
+  position: absolute;
+  bottom: calc(2rem - 1vw);
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .card-container {
@@ -122,7 +146,6 @@ main {
 }
 
 .card-cover {
-  margin-inline: 0.5rem;
   margin-top: 1rem;
   height: calc(6rem + 12vw);
   width: calc(4rem + 10vw);
@@ -131,7 +154,7 @@ main {
 }
 
 .card-info {
-  padding: .2rem;
+  padding: 0.2rem;
   display: flex;
   width: calc(4rem + 10vw);
 }
@@ -148,8 +171,9 @@ main {
 .column {
   margin-bottom: 2rem;
   height: 150vh;
-  width: calc(10rem + 20vw);
+  width: calc(9rem + 20vw);
   background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px 2px rgba(2, 2, 2, 0.1);
   padding-block: 1rem;
   position: absolute;
   top: 0;
@@ -175,16 +199,18 @@ main {
 
 .column-yellow-top svg {
   position: absolute;
-  left: calc(0.5rem + 8vw);
-  transform: rotateZ(-25deg);
+  top: calc(0.2rem + 4vw);
+  left: calc(0.2rem + 8vw);
+  transform: rotateZ(-22deg);
+  width: calc(2rem + 5vw);
 }
 
 .column-yellow-top div {
   position: absolute;
-  left: calc(0.5rem + 3vw);
-  top: calc(1rem + 8vw);
-  width: calc(1rem + 12vw);
-  height: calc(1rem + 2vw);
+  left: calc(0.5rem + 2vw);
+  top: calc(3.5rem + 8vw);
+  width: calc(1rem + 10vw);
+  height: calc(1rem + 1vw);
   background-color: #eee;
   margin-bottom: 2rem;
   margin-left: calc(1rem + 2vw);
@@ -193,8 +219,9 @@ main {
 
 .column-yellow-top img {
   position: absolute;
-  right: 1rem;
-  top: calc(4vw * 1.6);
+  right: calc(0.5rem + 1vw);
+  top: calc(1rem + 2vw);
+  width: calc(2rem + 12vw);
 }
 
 .column-white {
@@ -208,16 +235,16 @@ main {
 
 .column-white-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   height: 50%;
   padding-block: calc(0.5rem + 5vw);
-  padding-inline: calc(0.3rem + 0.8vw);
 }
 
 .category-card > .card-cover {
   height: calc(3.5rem + 8vw);
-  width: calc(4rem + 8vw);
+  width: calc(3.5rem + 9.2vw);
+  margin: 0;
 }
 
 .category-card > .card-info {
@@ -232,6 +259,10 @@ main {
 
 .column-white-bottom-left {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .column-white-bottom-left > p {
@@ -244,18 +275,19 @@ main {
   display: flex;
   flex-direction: column;
   width: 50%;
-  position: absolute;
-  left: calc(10px + 0.5vw);
-  bottom: 0;
+  /* position: absolute;
+  left: calc(2rem + 0.5vw);
+  bottom: calc(5px + 2.5vw);
+  border: solid 1px; */
 }
 
 .column-white-bottom-left button {
+  font-size: calc(5px + 0.5vw);
   color: white;
   background-color: black;
   padding: 5px;
   margin: 2px;
   border-radius: 2px;
-  font-size: calc(10px + 0.5vw);
 }
 
 .column-white-bottom img {
@@ -264,12 +296,14 @@ main {
 }
 
 .column-yellow-bottom {
-  height: calc(4rem + 2vw);
+  color: #fff;
+  height: calc(5rem + 2vw);
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   text-align: center;
+  text-shadow: 0 0 20px rgba(2, 2, 2, 0.2);
 }
 
 .column-yellow-bottom-title {
@@ -279,30 +313,84 @@ main {
 
 .column-yellow-bottom-info {
   font-size: calc(8px + 0.4vw);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .column-yellow-bottom > input {
   border: none;
   outline: none;
-  padding: 2px 4px;
+  padding: 2px 8px;
   border-radius: 4px;
-}
-
-.column-yellow-bottom > input::placeholder {
   font-family: "Poppins-ExtraLight", sans-serif;
   font-size: calc(8px + 0.4vw);
 }
 
 /* Footer */
 footer {
-  height: 20rem;
+  height: 15rem;
+  position: relative;
+  margin-top: 4rem;
+  margin-inline: -1rem;
+  background-color: #fff;
+  margin-bottom: 15rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: calc(8px + 0.4vw);
+  gap: 0.5rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.footer-left > p {
+  text-align: center;
+  white-space: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer-left-btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: calc(0.2rem + 2vw);
+}
+
+.footer-left-btn {
+  height: calc(20px + 1vw);
+  width: calc(20px + 1vw);
+  background-color: #e5c643;
+  border-radius: 0.5rem;
+  padding: 2px;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: calc(0.5rem + 2vw);
+  padding: 1rem;
+}
+
+.footer-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: calc(0.4rem + 1vw);
+}
+
+.footer-right-column > p:nth-child(1) {
+  color: #999;
 }
 
 .footer-wave {
-  width: calc(20rem + 15vw);
+  width: 110%;
   position: absolute;
-  bottom: 0;
+  top: 14rem;
   right: 0;
-  z-index: -10;
+  z-index: -1;
 }

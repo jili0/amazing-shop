@@ -46,7 +46,7 @@ main {
   margin-top: -2rem;
   margin-bottom: 2rem;
   margin-left: calc(0.5rem + 1vw);
-  min-height: calc(110vh + 2vw);
+  min-height: calc(100vh + 15vw);
   width: calc(12rem + 45vw);
   background-color: #fff;
   border-radius: 4px;
@@ -130,7 +130,7 @@ main {
 
 .hero-bottom {
   position: absolute;
-  bottom: calc(2rem - 1vw);
+  bottom: calc(2.5rem - 1vw);
   left: 0;
   right: 0;
   display: flex;
@@ -170,7 +170,7 @@ main {
 
 .column {
   margin-bottom: 2rem;
-  height: 150vh;
+  height: calc(135vh + 2vw);
   width: calc(9rem + 20vw);
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 20px 2px rgba(2, 2, 2, 0.1);

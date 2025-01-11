@@ -46,8 +46,8 @@ main {
   margin-top: -2rem;
   margin-bottom: 2rem;
   margin-left: calc(0.5rem + 1vw);
-  min-height: calc(115vh + 8vw);
-  width: calc(12rem + 38vw);
+  min-height: calc(110vh + 2vw);
+  width: calc(12rem + 45vw);
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 2px 2px 12px 1px rgba(2, 2, 2, 0.1);
@@ -221,7 +221,7 @@ main {
   position: absolute;
   right: calc(0.5rem + 1vw);
   top: calc(1rem + 2vw);
-  width: calc(2rem + 12vw);
+  width: calc(8rem + 2vw);
 }
 
 .column-white {

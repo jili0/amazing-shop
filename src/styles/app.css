@@ -508,7 +508,7 @@ main {
 
 .about-middle-bottom > div > .about-circle:nth-child(4) {
   position: absolute;
-  top: calc(6rem + 20vw);
+  top: calc(7rem + 16vw);
   left: calc(0.5rem + 1vw);
   scale: 1.1;
   background-color: pink;
@@ -517,6 +517,22 @@ main {
   margin-left: calc(5rem + 15vw);
 }
 
+.about-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: calc(0.5rem + 2vw);
+  min-height: calc(3rem + 25vw);
+}
+
+.about-bottom > .about-card {
+  background-color: #aaa;
+  height: calc(7rem + 12vw);
+  min-width: calc(5rem + 10vw);
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 2px 2px 12px 1px rgba(2, 2, 2, 0.1);
+}
 /* Footer */
 footer {
   height: 15rem;

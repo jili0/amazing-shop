@@ -522,7 +522,7 @@ main {
   justify-content: center;
   align-items: flex-end;
   gap: calc(0.5rem + 2vw);
-  min-height: calc(3rem + 25vw);
+  min-height: calc(3rem + 30vw);
 }
 
 .about-card {

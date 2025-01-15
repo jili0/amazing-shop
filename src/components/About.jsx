@@ -1,3 +1,5 @@
+import AboutCard from "./AboutCard";
+
 const About = () => {
   return (
     <div className="about-container">
@@ -6,7 +8,7 @@ const About = () => {
           <img
             width="200"
             height="200"
-            src="https://placehold.co/600x400"
+            src="https://images.unsplash.com/photo-1486944859394-ed1c44255713?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
         </div>
@@ -110,7 +112,7 @@ const About = () => {
             <img
               width="200"
               height="200"
-              src="https://placehold.co/600x400"
+              src="https://images.unsplash.com/photo-1529589574731-3c3eb55d8b76?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
             />
           </div>
@@ -122,7 +124,7 @@ const About = () => {
               <img
                 width="200"
                 height="200"
-                src="https://placehold.co/600x400"
+                src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
               />
             </div>
@@ -131,7 +133,7 @@ const About = () => {
               <img
                 width="200"
                 height="200"
-                src="https://placehold.co/600x400"
+                src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
               />
             </div>
@@ -139,7 +141,7 @@ const About = () => {
               <img
                 width="200"
                 height="200"
-                src="https://placehold.co/600x400"
+                src="https://images.unsplash.com/photo-1556565681-306458ef93cd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt=""
               />
             </div>
@@ -158,9 +160,9 @@ const About = () => {
       </div>
 
       <div className="about-bottom">
-        <div className="about-card"></div>
-        <div className="about-card"></div>
-        <div className="about-card"></div>
+        <AboutCard />
+        <AboutCard />
+        <AboutCard />
       </div>
     </div>
   );

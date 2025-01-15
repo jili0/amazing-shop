@@ -487,7 +487,7 @@ main {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  scale: 0.9;
+  scale: 1.4;
 }
 
 .about-middle-bottom > div > .about-circle:nth-child(2) {
@@ -525,14 +525,27 @@ main {
   min-height: calc(3rem + 25vw);
 }
 
-.about-bottom > .about-card {
+.about-card {
   background-color: #aaa;
   height: calc(7rem + 12vw);
   min-width: calc(5rem + 10vw);
   width: 100%;
   border-radius: 4px;
   box-shadow: 2px 2px 12px 1px rgba(2, 2, 2, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(5px + 1vw);
+  border: solid 5px red;
 }
+
+.about-card p {
+  padding: .2rem;
+  margin-bottom:.5rem;
+  text-align: center;
+}
+
 /* Footer */
 footer {
   height: 15rem;

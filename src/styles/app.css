@@ -537,12 +537,12 @@ main {
   align-items: center;
   justify-content: space-between;
   font-size: calc(5px + 1vw);
-  border: solid 5px red;
+  padding: calc(.2rem + 1vw)
 }
 
 .about-card p {
-  padding: .2rem;
-  margin-bottom:.5rem;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 

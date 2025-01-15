@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import productsContext from "../contexts/productsContext";
 import ProductsCategories from "../components/ProductsCategories";
 import SingleCategory from "../components/SingleCategory";
+import About from "../components/About";
 
 const Products = () => {
   const { products } = useContext(productsContext);
@@ -12,7 +13,7 @@ const Products = () => {
   return (
     <>
       <ProductsCategories />
-      {category ? <SingleCategory category={category} /> : ""}
+      {category ? <SingleCategory category={category} /> : <About />}
     </>
   );
 };

@@ -1,16 +1,16 @@
 /* Header */
 header {
-  height: 10rem;
-  margin: -1rem;
-  padding: 0.5rem calc(0.2rem + 2vw);
+  height: calc(3rem + 5vw);
 }
 
-.header-wave {
-  width: calc(20rem + 35vw);
-  position: absolute;
+nav {
+  padding: 0.5rem;
+  background-image: linear-gradient(to right, #f6ecb8, transparent);
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  right: 0;
+  z-index: 1;
 }
 
 nav > ul {
@@ -18,7 +18,6 @@ nav > ul {
   display: flex;
   gap: 0.5rem;
   font-size: calc(8px + 0.5vw);
-  margin-bottom: 2rem;
   font-family: "Poppins-ExtraLight", sans-serif;
 }
 
@@ -94,12 +93,15 @@ main {
 
 .hero-top-info > button {
   width: fit-content;
-  font-size: calc(8px + 1vw);
-  color: white;
   background-color: red;
   border-radius: 4px;
   padding: 0.5rem;
   box-shadow: 2px 2px 12px 1px rgba(2, 2, 2, 0.1);
+}
+
+.hero-top-info > button > a {
+  font-size: calc(8px + 1vw);
+  color: white;
 }
 
 .hero-top > img {
@@ -145,7 +147,14 @@ main {
   align-items: center;
 }
 
+.card-container:hover {
+  cursor: pointer;
+}
+
 .card-cover {
+  background-color: #aaa;
+  object-fit: cover;
+  object-position: top;
   margin-top: 1rem;
   height: calc(6rem + 12vw);
   width: calc(4rem + 10vw);
@@ -168,9 +177,19 @@ main {
   color: #999;
 }
 
+.explore-more-btn {
+  font-family: "Poppins-ExtraLight", sans-serif;
+  font-size: calc(10px + 0.8vw);
+  color: #999;
+  margin: 0.4rem;
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0.5rem;
+}
+
 .column {
   margin-bottom: 2rem;
-  height: calc(135vh + 2vw);
+  height: calc(134vh + 2vw);
   width: calc(9rem + 20vw);
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 20px 2px rgba(2, 2, 2, 0.1);
@@ -325,12 +344,47 @@ main {
   font-size: calc(8px + 0.4vw);
 }
 
+/* Products */
+
+.products-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 2rem 0.4rem 1rem;
+  background-color: #eee;
+  margin-top: calc(-2rem - 2vw);
+  margin-inline: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1%;
+}
+
+.single-category {
+  padding: 1rem;
+  font-family: "Poppins-ExtraLight", sans-serif;
+  font-size: calc(10px + 0.5vw);
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 20vw));
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.products-container .card-cover {
+  object-fit: contain;
+  /* background-color: white !important; */
+  background-image: linear-gradient(to right bottom, white 92%, transparent 8%);
+  object-position: center;
+  padding: 1rem;
+}
+
 /* Footer */
 footer {
   height: 15rem;
   position: relative;
   margin-top: 4rem;
-  margin-inline: -1rem;
   background-color: #fff;
   margin-bottom: 15rem;
   display: flex;
@@ -338,6 +392,7 @@ footer {
   align-items: center;
   font-size: calc(8px + 0.4vw);
   gap: 0.5rem;
+  box-shadow: 0 0 12px 2px rgba(2, 2, 2, 0.1);
 }
 
 .footer-left {

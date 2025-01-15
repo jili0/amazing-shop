@@ -1,6 +1,7 @@
+import { NavLink } from "react-router-dom";
 import column_top from "../assets/column_top.png";
 import phone_screen from "../assets/phone_screen.png";
-import CategoryCard from "./CategoryCard";
+import CategoryCard from "./CategoryCard.jsx";
 
 const Column = () => {
   return (
@@ -8,7 +9,6 @@ const Column = () => {
       <div className="column-yellow">
         <div className="column-yellow-top">
           <svg
-            class="icon"
             viewBox="0 0 1024 1024"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -27,8 +27,18 @@ const Column = () => {
         </div>
         <div className="column-white">
           <div className="column-white-top">
-            <CategoryCard />
-            <CategoryCard />
+            <NavLink to="/products/jewelry">
+              <CategoryCard
+                description="Jewelry"
+                cover="/src/assets/category_jewelry.png"
+              />
+            </NavLink>
+            <NavLink to="/products/electronics">
+              <CategoryCard
+                description="Electronics"
+                cover="/src/assets/category_electronics.png"
+              />
+            </NavLink>
           </div>
           <div className="column-white-bottom">
             <div className="column-white-bottom-left">
@@ -42,9 +52,11 @@ const Column = () => {
           </div>
         </div>
         <div className="column-yellow-bottom">
-          <p className="column-yellow-bottom-title">Lorem ipsum dolor sit amet!</p>
+          <p className="column-yellow-bottom-title">
+            Lorem ipsum dolor sit amet!
+          </p>
           <p className="column-yellow-bottom-info">Lorem ipsum dolor</p>
-          <input type="text" placeholder="Lorem ipsum dolor"/>
+          <input type="text" placeholder="Lorem ipsum dolor" />
         </div>
       </div>
     </div>

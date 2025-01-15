@@ -5,8 +5,8 @@ import logo_lacoste from "../assets/logo_lacoste.png";
 import logo_levis from "../assets/logo_levis.png";
 import logo_obey from "../assets/logo_obey.svg";
 import logo_shopify from "../assets/logo_shopify.svg";
-
 import ProductCard from "./ProductCard.jsx";
+import { NavLink } from "react-router-dom";
 const Hero = () => {
   return (
     <div className="hero">
@@ -16,7 +16,9 @@ const Hero = () => {
           <div className="hero-top-box"></div>
           <div className="hero-top-info">
             <p>Live for innovative fashion!</p>
-            <button>SHOP NOW</button>
+            <button>
+              <NavLink to="/products">SHOP NOW</NavLink>
+            </button>
           </div>
         </div>
         <img
@@ -33,10 +35,32 @@ const Hero = () => {
         <img height="30" src={logo_shopify} alt="logo_shopify" />
       </div>
       <div className="hero-bottom">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <NavLink to="/products/women">
+          <ProductCard
+            title="Women"
+            description="Discover more"
+            cover="/src/assets/category_women.png"
+          />
+        </NavLink>
+        <NavLink to="/products/men">
+          <ProductCard
+            title="Men"
+            description="Discover more"
+            cover="/src/assets/category_man.png"
+          />
+        </NavLink>
+        <NavLink to="/products/others">
+          <ProductCard
+            title="Others"
+            description="Discover more"
+            cover="/src/assets/category_others.png"
+          />
+        </NavLink>
       </div>
+      <NavLink to="/products">
+        {" "}
+        <button className="explore-more-btn">Explore more</button>
+      </NavLink>
     </div>
   );
 };

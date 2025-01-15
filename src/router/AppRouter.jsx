@@ -20,8 +20,8 @@ const AppRouter = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="/products" element={<Products />} />
-      <Route path="/products/example" element={<SingleProduct />} />
-
+      <Route path="/products/:category" element={<Products />} />
+      <Route path="/products/:category/:id" element={<SingleProduct />} />
       <Route path="/support" element={<CustomerService />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/account" element={<Account />} />

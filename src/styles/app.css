@@ -537,7 +537,7 @@ main {
   align-items: center;
   justify-content: space-between;
   font-size: calc(5px + 1vw);
-  padding: calc(0.2rem + 1vw);
+  padding: calc(.2rem + 1vw)
 }
 
 .about-card p {

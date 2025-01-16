@@ -12,10 +12,10 @@
 }
 
 // VARIABLES
-$color-sapphire: #4059ad;
-$color-blue-gray: #6b9ac4;
-$color-tiffany-blue: #97d8c4;
-$color-xanthous: #f4b942;
+$color-primary: #4059ad;
+$color-secondary: #6b9ac4;
+$color-tertiary: #97d8c4;
+$color-quaternary: #f4b942;
 
 $font-stack-thin: "Poppins-ExtraLight", sans-serif;
 $font-stack-normal: "Poppins-Light", sans-serif;
@@ -24,3 +24,50 @@ $font-stack-bold: "Poppins-Bold", sans-serif;
 $font-size-small: calc(8px + 0.8vw);
 $font-size-normal: calc(12px + 1.2vw);
 $font-size-big: calc(16px + 1.6vw);
+
+// FUNCTIONS
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+// MIXINS
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+// CLASSES
+$levels: (1, 2, 3, 4, 5, 6, 7, 8, 9);
+@each $level in $levels {
+  // margin
+  .m-#{$level} {
+    margin: calc(#{$level / 2}rem + #{$level / 2}vw);
+  }
+  .mx-#{$level} {
+    margin: 0 calc(#{$level / 2}rem + #{$level / 2}vw);
+  }
+  .my-#{$level} {
+    margin: calc(#{$level / 2}rem + #{$level / 2}vw) 0;
+  }
+
+  // padding
+  .p-#{$level} {
+    padding: calc(#{$level / 2}rem + #{$level / 2}vw);
+  }
+  .px-#{$level} {
+    padding: 0 calc(#{$level / 2}rem + #{$level / 2}vw);
+  }
+  .py-#{$level} {
+    padding: calc(#{$level / 2}rem + #{$level / 2}vw) 0;
+  }
+
+  // font-size
+  .font-#{$level} {
+    font-size: calc(#{$level * 4}px + 4px + #{$level * 0.4}vw + 0.4vw);
+  }
+}
+

@@ -11,7 +11,7 @@ const CategoryCard = ({ description, cover }) => {
   }
 
   return (
-    <div className="category-card card-container">
+    <div className="category-card card">
       <img className="card-cover" src={cover} ref={coverImgRef} />
       <div className="card-info">
         <div>

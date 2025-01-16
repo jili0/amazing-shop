@@ -4,7 +4,7 @@ import phone_screen from "../assets/phone_screen.png";
 import category_jewelry from "../assets/category_jewelry.png";
 import category_electronics from "../assets/category_electronics.png";
 import CategoryCard from "./CategoryCard.jsx";
-import "../styles/column.css" 
+// import "../styles/column.css" 
 
 
 const Column = () => {

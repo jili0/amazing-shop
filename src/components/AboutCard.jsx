@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "../styles/about.css"
+// import "../styles/about.css"
 
 const AboutCard = () => {
   return (

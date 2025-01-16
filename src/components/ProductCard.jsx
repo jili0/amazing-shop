@@ -1,6 +1,6 @@
 import { useContext, useRef } from "react";
 import colorsContext from "../contexts/colorsContext.jsx";
-import "../styles/card.css" 
+// import "../styles/card.css" 
 
 
 
@@ -10,7 +10,7 @@ const ProductCard = ({ title, description, cover }) => {
   if (coverImgRef.current) coverImgRef.current.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
 
   return (
-    <div className="card-container">
+    <div className="card">
       <img className="card-cover" src={cover} ref={coverImgRef}/>
       <div className="card-info">
         <div>

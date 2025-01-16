@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import CategoryCard from "./CategoryCard.jsx";
 import category_women from "../assets/category_women.png";
 import category_men from "../assets/category_men.png";
-import category_others from "../assets/category_others.png";
 import category_jewelry from "../assets/category_jewelry.png";
 import category_electronics from "../assets/category_others.png";
 

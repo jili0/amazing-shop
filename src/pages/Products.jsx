@@ -5,6 +5,7 @@ import productsContext from "../contexts/productsContext";
 import ProductsCategories from "../components/ProductsCategories";
 import SingleCategory from "../components/SingleCategory";
 import About from "../components/About";
+import "../styles/products.css";
 
 const Products = () => {
   const { products } = useContext(productsContext);

@@ -1,0 +1,36 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container:hover {
+  cursor: pointer;
+}
+
+.card-cover {
+  background-color: #aaa;
+  object-fit: cover;
+  object-position: top;
+  margin-top: 1rem;
+  height: calc(6rem + 12vw);
+  width: calc(4rem + 10vw);
+  border-radius: 4px;
+  box-shadow: 2px 2px 12px 1px rgba(2, 2, 2, 0.1);
+}
+
+.card-info {
+  padding: 0.2rem;
+  display: flex;
+  width: calc(4rem + 10vw);
+}
+
+.card-title {
+  font-size: calc(10px + 0.5vw);
+}
+
+.card-description {
+  font-size: calc(8px + 0.5vw);
+  color: #999;
+}

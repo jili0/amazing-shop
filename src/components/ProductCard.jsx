@@ -1,5 +1,7 @@
 import { useContext, useRef } from "react";
 import colorsContext from "../contexts/colorsContext.jsx";
+import "../styles/card.css" 
+
 
 
 const ProductCard = ({ title, description, cover }) => {

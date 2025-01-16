@@ -39,21 +39,21 @@ const Hero = () => {
           <ProductCard
             title="Women"
             description="Discover more"
-            cover="/src/assets/category_women.png"
+            cover="/assets/category_women.png"
           />
         </NavLink>
         <NavLink to="/products/men">
           <ProductCard
             title="Men"
             description="Discover more"
-            cover="/src/assets/category_man.png"
+            cover="/assets/category_man.png"
           />
         </NavLink>
         <NavLink to="/products/others">
           <ProductCard
             title="Others"
             description="Discover more"
-            cover="/src/assets/category_others.png"
+            cover="/assets/category_others.png"
           />
         </NavLink>
       </div>

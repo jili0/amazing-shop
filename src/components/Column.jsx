@@ -30,13 +30,13 @@ const Column = () => {
             <NavLink to="/products/jewelry">
               <CategoryCard
                 description="Jewelry"
-                cover="/src/assets/category_jewelry.png"
+                cover="/assets/category_jewelry.png"
               />
             </NavLink>
             <NavLink to="/products/electronics">
               <CategoryCard
                 description="Electronics"
-                cover="/src/assets/category_electronics.png"
+                cover="/assets/category_electronics.png"
               />
             </NavLink>
           </div>

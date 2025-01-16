@@ -5,6 +5,9 @@ import logo_lacoste from "../assets/logo_lacoste.png";
 import logo_levis from "../assets/logo_levis.png";
 import logo_obey from "../assets/logo_obey.svg";
 import logo_shopify from "../assets/logo_shopify.svg";
+import category_women from "../assets/category_women.png";
+import category_men from "../assets/category_men.png";
+import category_others from "../assets/category_others.png";
 import ProductCard from "./ProductCard.jsx";
 import { NavLink } from "react-router-dom";
 const Hero = () => {
@@ -39,21 +42,21 @@ const Hero = () => {
           <ProductCard
             title="Women"
             description="Discover more"
-            cover="/assets/category_women.png"
+            cover={category_women}
           />
         </NavLink>
         <NavLink to="/products/men">
           <ProductCard
             title="Men"
             description="Discover more"
-            cover="/assets/category_man.png"
+            cover={category_men}
           />
         </NavLink>
         <NavLink to="/products/others">
           <ProductCard
             title="Others"
             description="Discover more"
-            cover="/assets/category_others.png"
+            cover={category_others}
           />
         </NavLink>
       </div>

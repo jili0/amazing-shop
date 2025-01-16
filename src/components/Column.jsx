@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import column_top from "../assets/column_top.png";
 import phone_screen from "../assets/phone_screen.png";
+import category_jewelry from "../assets/category_jewelry.png";
+import category_electronics from "../assets/category_electronics.png";
 import CategoryCard from "./CategoryCard.jsx";
 
 const Column = () => {
@@ -30,13 +32,13 @@ const Column = () => {
             <NavLink to="/products/jewelry">
               <CategoryCard
                 description="Jewelry"
-                cover="/assets/category_jewelry.png"
+                cover={category_jewelry}
               />
             </NavLink>
             <NavLink to="/products/electronics">
               <CategoryCard
                 description="Electronics"
-                cover="/assets/category_electronics.png"
+                cover={category_electronics}
               />
             </NavLink>
           </div>

@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $color-xanthous;
+  font-family: $font-stack-thin;
+  font-size: $font-size-normal;
+}
+
+body {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+  text-shadow: 0 0 10px rgba(2, 2, 2, 0.2);
+  :hover {
+    color: black;
+  }
+  :active {
+    opacity: 0.7;
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  :hover {
+    opacity: 0.8;
+  }
+  :active {
+    opacity: 0.9;
+  }
+}

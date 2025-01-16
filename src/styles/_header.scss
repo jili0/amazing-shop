@@ -1,0 +1,33 @@
+header {
+  height: calc(3rem + 5vw);
+}
+
+nav {
+  padding: 0.5rem;
+  background-image: linear-gradient(to right, $color-xanthous, transparent);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+    font-size: calc(8px + 0.5vw);
+    font-family: $font-stack-thin;
+    li:hover {
+      position: relative;
+      ::after {
+        content: "";
+        background-color: #e5c643;
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        right: 0;
+        height: 2px;
+        width: 100%;
+      }
+    }
+  }
+}

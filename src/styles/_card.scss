@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  :hover {
+    cursor: pointer;
+  }
+  &-cover {
+    background-color: #aaa;
+    object-fit: cover;
+    object-position: top;
+    margin-top: 1rem;
+    height: calc(6rem + 12vw);
+    width: calc(4rem + 10vw);
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px 1px rgba(2, 2, 2, 0.1);
+  }
+  &-info {
+    padding: 0.2rem;
+    display: flex;
+    width: calc(4rem + 10vw);
+  }
+  &-title {
+    font-size: calc(10px + 0.5vw);
+  }
+  &-description {
+    font-size: calc(8px + 0.5vw);
+    color: #999;
+  }
+}
+
+.category-card {
+  .card-cover {
+    height: calc(3.5rem + 8vw);
+    width: calc(3.5rem + 9.2vw);
+    margin: 0;
+  }
+  .card-info {
+    padding: 0.4rem;
+  }
+}

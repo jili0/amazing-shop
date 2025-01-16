@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Poppins-ExtraLight";
+  src: url("../fonts/Poppins-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+
+// VARIABLES
+$color-sapphire: #4059ad;
+$color-blue-gray: #6b9ac4;
+$color-tiffany-blue: #97d8c4;
+$color-xanthous: #f4b942;
+
+$font-stack-thin: "Poppins-ExtraLight", sans-serif;
+$font-stack-normal: "Poppins-Light", sans-serif;
+$font-stack-bold: "Poppins-Bold", sans-serif;
+
+$font-size-small: calc(8px + 0.8vw);
+$font-size-normal: calc(12px + 1.2vw);
+$font-size-big: calc(16px + 1.6vw);

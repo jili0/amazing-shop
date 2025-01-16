@@ -1,8 +1,6 @@
-// import "../styles/footer.css";
-
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <div className="footer-left">
         <p>Complete your style with awesome clothes from us</p>
         <div className="footer-left-btns">

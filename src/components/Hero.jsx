@@ -9,7 +9,6 @@ import category_women from "../assets/category_women.png";
 import category_men from "../assets/category_men.png";
 import category_others from "../assets/category_others.png";
 import ProductCard from "./ProductCard.jsx";
-// import "../styles/hero.css" 
 
 import { NavLink } from "react-router-dom";
 const Hero = () => {

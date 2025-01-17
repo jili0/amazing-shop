@@ -1,9 +1,8 @@
 import { Outlet } from "react-router-dom";
-import "../styles/main.css" 
 
 const Main = () => {
   return (
-    <main>
+    <main className="mx-1 my-5 p-1">
       <Outlet />
     </main>
   )

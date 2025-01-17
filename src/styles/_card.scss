@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  :hover {
+    cursor: pointer;
+  }
+  &-cover {
+    background-color: lighten($color-primary, 10%);
+    object-fit: cover;
+    object-position: top;
+    margin-top: 1rem;
+    height: calc(6rem + 12vw);
+    width: calc(4rem + 10vw);
+    border-radius: 4px;
+    box-shadow: $shadow-box;
+  }
+  &-info {
+    padding: 0.2rem;
+    display: flex;
+    width: calc(4rem + 10vw);
+  }
+  &-title {
+  }
+  &-description {
+    color: #999;
+  }
+}

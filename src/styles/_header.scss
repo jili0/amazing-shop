@@ -1,0 +1,43 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: $shadow-box;
+  background-image: linear-gradient(
+    to right bottom,
+    darken($color-primary, 20%) 25%,
+    darken($color-secondary, 20%) 25%,
+    darken($color-secondary, 20%) 50%,
+    darken($color-tertiary, 20%) 50%,
+    darken($color-tertiary, 20%) 75%,
+    darken($color-quaternary, 20%) 75%,
+    darken($color-quaternary, 20%) 100%
+  );
+  @include set-background($color-primary);
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    display: flex;
+    font-family: $font-stack-thin;
+    li:hover {
+      position: relative;
+      ::after {
+        content: "";
+        background-color: $color-quaternary;
+        position: absolute;
+        top: $space-1;
+        left: -2px;
+        right: 0;
+        height: 2px;
+        width: calc(100% + 4px);
+      }
+    }
+    a {
+      text-shadow: 0 0 10px rgba(2, 2, 2, 0.9);
+    }
+  }
+}

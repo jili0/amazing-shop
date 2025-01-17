@@ -1,9 +1,8 @@
 import Nav from "../components/Nav.jsx";
-import "../styles/header.css" 
 
 const Header = () => {
   return (
-    <header>
+    <header className="h-1">
       <Nav />
     </header>
   );

@@ -11,7 +11,6 @@ import CustomerService from "../pages/CustomerService.jsx";
 import Account from "../pages/Account.jsx";
 import Cart from "../pages/Cart.jsx";
 import Login from "../pages/Login.jsx";
-import Orders from "../pages/Orders.jsx";
 import SingleProduct from "../pages/SingleProduct.jsx";
 import NotFound from "../pages/NotFound.jsx";
 
@@ -26,8 +25,6 @@ const AppRouter = createBrowserRouter(
       <Route path="/cart" element={<Cart />} />
       <Route path="/account" element={<Account />} />
       <Route path="/account/login" element={<Login />} />
-      <Route path="/account/orders" element={<Orders />} />
-
       <Route path="*" element={<NotFound />} />
     </Route>
   )

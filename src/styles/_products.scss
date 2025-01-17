@@ -1,17 +1,4 @@
-/* Main */
-main {
-  margin-bottom: 2rem;
-}
 
-.explore-more-btn {
-  font-family: "Poppins-ExtraLight", sans-serif;
-  font-size: calc(10px + 0.8vw);
-  color: #999;
-  margin: 0.4rem;
-  position: absolute;
-  bottom: 0.2rem;
-  right: 0.5rem;
-}
 
 /* Products */
 
@@ -29,7 +16,6 @@ main {
 .single-category {
   padding: 1rem;
   font-family: "Poppins-ExtraLight", sans-serif;
-  font-size: calc(10px + 0.5vw);
 }
 
 .products-container {
@@ -39,12 +25,15 @@ main {
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
-}
-
-.products-container .card-cover {
-  object-fit: contain;
-  /* background-color: white !important; */
-  background-image: linear-gradient(to right bottom, white 92%, transparent 8%);
-  object-position: center;
-  padding: 1rem;
+  .card-cover {
+    object-fit: contain;
+    /* background-color: white !important; */
+    background-image: linear-gradient(
+      to right bottom,
+      white 92%,
+      transparent 8%
+    );
+    object-position: center;
+    padding: 1rem;
+  }
 }

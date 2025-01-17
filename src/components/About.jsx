@@ -2,7 +2,7 @@ import AboutCard from "./AboutCard";
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="about">
       <div className="about-top">
         <div className="about-circle">
           <img

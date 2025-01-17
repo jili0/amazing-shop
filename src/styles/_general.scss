@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  @include set-background(darken($color-primary, 30%));
+  font-family: $font-stack-thin;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to left bottom,
+    darken($color-primary, 20%) 25%,
+    darken($color-secondary, 20%) 25%,
+    darken($color-secondary, 20%) 50%,
+    darken($color-tertiary, 20%) 50%,
+    darken($color-tertiary, 20%) 75%,
+    darken($color-quaternary, 20%) 75%,
+    darken($color-quaternary, 20%) 100%
+  );
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  :hover {
+    opacity: 0.8;
+  }
+  :active {
+    opacity: 0.9;
+  }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  :hover {
+    opacity: 0.8;
+  }
+  :active {
+    opacity: 0.9;
+  }
+}

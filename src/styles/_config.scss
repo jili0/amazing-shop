@@ -21,9 +21,13 @@ $font-stack-thin: "Poppins-ExtraLight", sans-serif;
 $font-stack-normal: "Poppins-Light", sans-serif;
 $font-stack-bold: "Poppins-Bold", sans-serif;
 
-$font-size-small: calc(8px + 0.8vw);
-$font-size-normal: calc(12px + 1.2vw);
-$font-size-big: calc(16px + 1.6vw);
+$space-1: calc(0.8rem + 0.4vw);
+$space-2: calc(1.6rem + 2vw);
+$space-3: calc(2.4rem + 2.8vw);
+$space-4: calc(3.2rem + 3.6vw);
+$space-5: calc(4rem + 4.4vw);
+
+$shadow-box: 2px 2px 15px 0 rgba(darken($color-primary, 30), .1);
 
 // FUNCTIONS
 @function set-text-color($color) {
@@ -41,33 +45,61 @@ $font-size-big: calc(16px + 1.6vw);
 }
 
 // CLASSES
-$levels: (1, 2, 3, 4, 5, 6, 7, 8, 9);
+$levels: (1, 2, 3, 4, 5);
 @each $level in $levels {
   // margin
   .m-#{$level} {
-    margin: calc(#{$level / 2}rem + #{$level / 2}vw);
+    margin: calc(#{calc($level * 0.1)}rem + #{$level}vw);
   }
   .mx-#{$level} {
-    margin: 0 calc(#{$level / 2}rem + #{$level / 2}vw);
+    margin-inline: calc(#{calc($level * 0.1)}rem + #{$level}vw);
   }
   .my-#{$level} {
-    margin: calc(#{$level / 2}rem + #{$level / 2}vw) 0;
+    margin-block: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+  }
+  .mt-#{$level} {
+    margin-top: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+  }
+  .mr-#{$level} {
+    margin-right: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+  }
+  .mb-#{$level} {
+    margin-bottom: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+  }
+  .ml-#{$level} {
+    margin-left: calc(#{calc($level * 0.1)}rem + #{$level}vw);
   }
 
   // padding
   .p-#{$level} {
-    padding: calc(#{$level / 2}rem + #{$level / 2}vw);
+    padding: calc(#{calc($level * 0.1)}rem + #{$level}vw);
   }
   .px-#{$level} {
-    padding: 0 calc(#{$level / 2}rem + #{$level / 2}vw);
+    padding-inline: calc(#{calc($level * 0.1)}rem + #{$level}vw);
   }
   .py-#{$level} {
-    padding: calc(#{$level / 2}rem + #{$level / 2}vw) 0;
+    padding-block: calc(#{calc($level * 0.1)}rem + #{$level}vw);
   }
 
+  // gap
+  .g-#{$level} {
+    gap: calc(#{calc($level / 8)}rem + #{$level}vw);
+  }
+
+  // height
+  .h-#{$level} {
+    height: calc(#{calc($level * 1.2)}rem + #{calc($level * 2)}vw);
+  }
+  // width
+  .w-#{$level} {
+    width: calc(#{$level}rem + #{calc($level * 10)}vw);
+  }
   // font-size
-  .font-#{$level} {
-    font-size: calc(#{$level * 4}px + 4px + #{$level * 0.4}vw + 0.4vw);
+  .f-#{$level} {
+    font-size: calc(#{calc($level * 2 + 10)}px + #{calc($level * 0.1)}vw);
   }
 }
 
+.b {
+  border: solid 1px red;
+}

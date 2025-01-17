@@ -14,7 +14,7 @@
     height: calc(6rem + 12vw);
     width: calc(4rem + 10vw);
     border-radius: 4px;
-    box-shadow: 2px 2px 12px 1px rgba(2, 2, 2, 0.1);
+    box-shadow: $shadow-box;
   }
   &-info {
     padding: 0.2rem;
@@ -22,10 +22,8 @@
     width: calc(4rem + 10vw);
   }
   &-title {
-    font-size: calc(10px + 0.5vw);
   }
   &-description {
-    font-size: calc(8px + 0.5vw);
     color: #999;
   }
 }

@@ -5,29 +5,38 @@
 }
 
 html {
-  @include set-background($color-primary);
-  font-family: $font-stack-thin;
-  font-size: $font-size-normal;
+  overflow-x: hidden;
 }
 
 body {
+  @include set-background(darken($color-primary, 30%));
+  font-family: $font-stack-thin;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to left bottom,
+    darken($color-primary, 20%) 25%,
+    darken($color-secondary, 20%) 25%,
+    darken($color-secondary, 20%) 50%,
+    darken($color-tertiary, 20%) 50%,
+    darken($color-tertiary, 20%) 75%,
+    darken($color-quaternary, 20%) 75%,
+    darken($color-quaternary, 20%) 100%
+  );
 }
 
 a {
   text-decoration: none;
-  color: gray;
-  text-shadow: 0 0 10px rgba(2, 2, 2, 0.2);
+  color: inherit;
   :hover {
-    color: black;
+    opacity: 0.8;
   }
   :active {
-    opacity: 0.7;
+    opacity: 0.9;
   }
 }
 
 button {
   border: none;
-  background-color: transparent;
   cursor: pointer;
   :hover {
     opacity: 0.8;

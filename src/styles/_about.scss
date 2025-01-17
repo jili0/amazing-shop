@@ -126,7 +126,7 @@
             top: calc(7rem + 16vw);
             left: calc(0.5rem + 1vw);
             scale: 1.1;
-            background-color: pink;
+            background-color: $color-primary;
           }
         }
       }
@@ -143,7 +143,7 @@
     min-height: calc(3rem + 30vw);
   }
   .about-card {
-    background-color: #aaa;
+    background-color: $color-primary;
     height: calc(7rem + 12vw);
     min-width: calc(5rem + 10vw);
     width: 100%;
@@ -153,11 +153,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    font-size: calc(5px + 1vw);
-    padding: calc(0.2rem + 1vw);
     p {
-      padding: 0.2rem;
-      margin-bottom: 0.5rem;
       text-align: center;
     }
   }

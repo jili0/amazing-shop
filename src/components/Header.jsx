@@ -2,7 +2,7 @@ import Nav from "../components/Nav.jsx";
 
 const Header = () => {
   return (
-    <header>
+    <header className="h-1">
       <Nav />
     </header>
   );

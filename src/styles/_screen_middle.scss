@@ -19,5 +19,8 @@
   }
   .footer {
     flex-direction: row;
+    &-right {
+      width: 45%;
+    }
   }
 }

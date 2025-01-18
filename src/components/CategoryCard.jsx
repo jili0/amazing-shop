@@ -4,7 +4,7 @@ const CategoryCard = ({ title, cover }) => {
       <img className="card-cover" src={cover} height="300" width="200"/>
       <div className="card-info p-1">
         <div>
-          <p className="px-1">{title}</p>
+          <p className="card-title px-1">{title}</p>
         </div>
         <button>
           <svg

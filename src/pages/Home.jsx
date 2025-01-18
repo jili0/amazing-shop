@@ -45,10 +45,10 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className="home">
       <Hero />
       <Column />
-    </>
+    </div>
   );
 };
 

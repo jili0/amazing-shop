@@ -16,18 +16,22 @@ $color-primary: #4059ad;
 $color-secondary: #6b9ac4;
 $color-tertiary: #97d8c4;
 $color-quaternary: #f4b942;
+$color-light: rgba(255, 255, 255, 0.7);
 
 $font-stack-thin: "Poppins-ExtraLight", sans-serif;
 $font-stack-normal: "Poppins-Light", sans-serif;
 $font-stack-bold: "Poppins-Bold", sans-serif;
 
-$space-1: calc(0.8rem + 0.4vw);
-$space-2: calc(1.6rem + 2vw);
-$space-3: calc(2.4rem + 2.8vw);
-$space-4: calc(3.2rem + 3.6vw);
-$space-5: calc(4rem + 4.4vw);
+$space-1: calc(1rem + 1vw);
+$space-2: calc(2rem + 2vw);
+$space-3: calc(3rem + 3vw);
+$space-4: calc(4rem + 4vw);
+$space-5: calc(5rem + 5vw);
+$space-6: calc(6rem + 6vw);
+$space-7: calc(7rem + 7vw);
+$space-8: calc(8rem + 8vw);
 
-$shadow-box: 2px 2px 15px 0 rgba(darken($color-primary, 30), .1);
+$shadow-box: 2px 2px 15px 0 rgba(darken($color-primary, 30), 0.1);
 
 // FUNCTIONS
 @function set-text-color($color) {
@@ -79,6 +83,18 @@ $levels: (1, 2, 3, 4, 5);
   }
   .py-#{$level} {
     padding-block: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+  }
+  .pt-#{$level} {
+    padding-top: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+  }
+  .pr-#{$level} {
+    padding-right: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+  }
+  .pb-#{$level} {
+    padding-bottom: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+  }
+  .pl-#{$level} {
+    padding-left: calc(#{calc($level * 0.1)}rem + #{$level}vw);
   }
 
   // gap

@@ -7,64 +7,53 @@ import logo_obey from "../assets/logo_obey.svg";
 import logo_shopify from "../assets/logo_shopify.svg";
 import category_women from "../assets/category_women.png";
 import category_men from "../assets/category_men.png";
-import category_others from "../assets/category_others.png";
-import ProductCard from "./ProductCard.jsx";
+import category_jewelry from "../assets/category_jewelry.png";
+import category_electronics from "../assets/category_electronics.png";
+import CategoryCard from "./CategoryCard.jsx";
 
 import { NavLink } from "react-router-dom";
 const Hero = () => {
   return (
-    <div className="hero">
-      <div className="hero-top">
-        <div>
-          <div className="hero-top-box"></div>
-          <div className="hero-top-box"></div>
-          <div className="hero-top-info">
-            <p>Live for innovative fashion!</p>
-            <button>
-              <NavLink to="/products">SHOP NOW</NavLink>
-            </button>
-          </div>
+    <div className="hero m-2 py-2">
+      <div className="hero-top pt-4 px-2">
+        <div className="hero-top-info pt-4 g-1">
+          <p className="f-3">Live for innovative fashion!</p>
+          <button className="mt-2 mb-3 py-1 px-2">
+            <NavLink to="/products">SHOP NOW</NavLink>
+          </button>
         </div>
+        <img src={hero} alt="woman with hat" width="100" />
+      </div>
+      <div className="hero-middle h-2 p-1 g-2">
         <img
-          src={hero}
-          alt="red jackets with pants and hand bag in the same color"
+          height="100"
+          src={logo_amazon}
+          alt="logo_amazon"
+          className="pt-1"
         />
+        <img height="100" src={logo_hm} alt="logo_hm" />
+        <img height="100" src={logo_lacoste} alt="logo_lacoste" />
+        <img height="100" src={logo_levis} alt="logo_levis" />
+        <img height="100" src={logo_obey} alt="logo_obey" />
+        <img height="100" src={logo_shopify} alt="logo_shopify" />
       </div>
-      <div className="hero-middle">
-        <img height="30" src={logo_amazon} alt="logo_amazon" />
-        <img height="30" src={logo_hm} alt="logo_hm" />
-        <img height="30" src={logo_lacoste} alt="logo_lacoste" />
-        <img height="30" src={logo_levis} alt="logo_levis" />
-        <img height="30" src={logo_obey} alt="logo_obey" />
-        <img height="30" src={logo_shopify} alt="logo_shopify" />
-      </div>
-      <div className="hero-bottom">
+      <div className="hero-bottom pt-4">
         <NavLink to="/products/women">
-          <ProductCard
-            title="Women"
-            description="Discover more"
-            cover={category_women}
-          />
+          <CategoryCard title="Women" cover={category_women} />
         </NavLink>
         <NavLink to="/products/men">
-          <ProductCard
-            title="Men"
-            description="Discover more"
-            cover={category_men}
-          />
+          <CategoryCard title="Men" cover={category_men} />
         </NavLink>
-        <NavLink to="/products/others">
-          <ProductCard
-            title="Others"
-            description="Discover more"
-            cover={category_others}
-          />
+        <NavLink to="/products/jewelry">
+          <CategoryCard title="Jewelry" cover={category_jewelry} />
+        </NavLink>
+        <NavLink to="/products/electronics">
+          <CategoryCard title="Electronics" cover={category_electronics} />
+        </NavLink>
+        <NavLink to="/products/">
+          <CategoryCard title="More" />
         </NavLink>
       </div>
-      <NavLink to="/products">
-        {" "}
-        <button className="explore-more-btn">Explore more</button>
-      </NavLink>
     </div>
   );
 };

@@ -29,7 +29,7 @@ nav {
         content: "";
         background-color: $color-quaternary;
         position: absolute;
-        top: $space-1;
+        top: calc($space-1 - 1vw);
         left: -2px;
         right: 0;
         height: 2px;

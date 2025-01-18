@@ -1,118 +1,72 @@
 .column {
-  margin-bottom: 2rem;
-  height: calc(134vh + 2vw);
-  width: calc(9rem + 20vw);
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 20px 2px rgba(2, 2, 2, 0.1);
-  padding-block: 1rem;
-  position: absolute;
-  top: 0;
-  right: calc(1rem + 1vw);
-  z-index: -1;
-  &-yellow {
-    height: 130vh;
-    background-color: #ebd96b;
-    background-image: radial-gradient(ellipse at top left, #f6ecb8, #ebd96b),
-      radial-gradient(ellipse at bottom right, #e5c643, #ebd96b);
-    padding-top: 1rem;
-    margin-top: 0.5rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    &-top {
-      height: 40vh;
+  box-shadow: $shadow-box;
+  background-color: rgba($color-quaternary, 0.7);
+  height: fit-content;
+  &-top {
+    @include set-background(darken($color-quaternary, 10%));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+    div {
+      display: grid;
       svg {
-        position: absolute;
-        top: calc(0.2rem + 4vw);
-        left: calc(0.2rem + 8vw);
         transform: rotateZ(-22deg);
-        width: calc(2rem + 5vw);
-      }
-      div {
-        position: absolute;
-        left: calc(0.5rem + 2vw);
-        top: calc(3.5rem + 8vw);
-        width: calc(1rem + 10vw);
-        height: calc(1rem + 1vw);
-        background-color: #eee;
-        margin-bottom: 2rem;
-        margin-left: calc(1rem + 2vw);
-        transform: rotateZ(10deg);
-      }
-      img {
-        position: absolute;
-        right: calc(0.5rem + 1vw);
-        top: calc(1rem + 2vw);
-        width: calc(8rem + 2vw);
+        max-width: 50%;
+        place-self: center;
       }
     }
-    &-bottom {
-      color: #fff;
-      height: calc(5rem + 2vw);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-      text-shadow: 0 0 20px rgba(2, 2, 2, 0.2);
-      &-title {
-        font-family: "Poppins-Bold", sans-serif;
-      }
-      &-info {
-        margin-bottom: 0.5rem;
-      }
-      input {
-        border: none;
-        outline: none;
-        border-radius: 4px;
-      }
+    img {
+      max-width: 90%;
     }
   }
-  &-white {
-    position: absolute;
-    top: calc(10rem + 5vw);
-    bottom: 20vh;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    &-top {
-      display: flex;
+  &-middle {
+    @include set-background(rgba(255, 255, 255, 0.7));
+
+    &-cards {
+      display: grid;
+      place-content: center;
+      justify-content: center;
+      grid-template-columns: repeat(2, minmax(3rem, 1fr));
+      .card {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    &-info {
+      display: grid;
+      gap: $space-1;
+      grid-template-columns: repeat(3, 1fr);
       justify-content: space-evenly;
       align-items: center;
-      height: 50%;
-      padding-block: calc(0.5rem + 5vw);
-    }
-    &-bottom {
-      display: flex;
-      justify-content: space-evenly;
-      padding: 1rem;
-      &-left {
-        position: relative;
+      div {
+        grid-column: 1 / 3;
+        text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        > p {
-          padding: 4px;
-          margin-bottom: 1rem;
-        }
         button {
-          color: white;
-          background-color: black;
-          padding: 5px;
-          margin: 2px;
-          border-radius: 2px;
+          margin: 0 auto;
+          display: block;
+          @include set-background(#333);
+          border-radius: 4px;
+          font: inherit;
         }
       }
       img {
-        height: calc(5rem + 5vw);
-        width: auto;
+        grid-column: 3 / 4;
+        width: 100%;
       }
     }
   }
-  &-btns {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+  &-bottom {
+    @include set-background(darken($color-quaternary, 10%));
+    display: grid;
+    place-content: center;
+    text-align: center;
+    input {
+      border: none;
+      outline: none;
+      border-radius: 4px;
+    }
   }
 }

@@ -1,85 +1,57 @@
 .hero {
-  margin-top: -2rem;
-  margin-bottom: 2rem;
-  margin-left: calc(0.5rem + 1vw);
-  min-height: calc(100vh + 15vw);
-  width: calc(12rem + 45vw);
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 2px 2px 12px 1px rgba(2, 2, 2, 0.1);
-  padding-block: calc(1rem + 1vw);
-  position: relative;
+  @include set-background(rgba(lighten($color-quaternary, 10%), 0.7));
+  border-radius: 0.2rem;
+  box-shadow: $shadow-box;
   &-top {
-    height: calc(60vh - 2vw);
-    background-color: #eee;
-    margin: calc(1.5rem - 2vw) calc(1rem + 2vw) calc(3rem - 2vw);
-    border-radius: 10px;
+    @include set-background($color-light);
+    background-image: linear-gradient(
+      to bottom,
+      $color-light,
+      darken($color-primary, 40%)
+    );
     display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    position: relative;
-    &-box {
-      width: calc(1rem + 12vw);
-      height: calc(1rem + 1vw);
-      background-color: #e5c643;
-      margin-bottom: 1rem;
-      margin-left: calc(1rem + 2vw);
-      transform: rotateZ(-15deg);
-      :nth-child(1) {
-        background-color: white;
-        margin-top: 3rem;
-      }
-    }
+    justify-content: space-evenly;
+    align-items: center;
     &-info {
-      position: absolute;
-      left: calc(4px + 2vw);
-      top: calc(10rem + 4vw);
       display: flex;
       flex-direction: column;
-      gap: calc(0.5rem + 1vw);
+      justify-content: center;
       align-items: center;
-      font-family: "Poppins-Bold", sans-serif;
+      text-align: center;
+      font-family: $font-stack-normal;
+      font-weight: bold;
       button {
         width: fit-content;
-        background-color: red;
-        border-radius: 4px;
-        padding: 0.5rem;
-        box-shadow: 2px 2px 12px 1px rgba(2, 2, 2, 0.1);
-        a {
-          font-size: calc(8px + 1vw);
-          color: white;
-        }
+        @include set-background($color-quaternary);
+        border-radius: 0.2rem;
+        box-shadow: $shadow-box;
+        font-size: inherit;
       }
     }
-    & img {
-      margin: 1rem;
-      height: 100%;
+    img {
+      width: 60%;
+      max-width: 20rem;
+      align-self: center;
       object-fit: cover;
       object-position: top;
     }
   }
   &-middle {
-    height: 8vh;
-    background-color: #ebd96b;
-    margin: -1px;
+    background-color: darken($color-quaternary, 10%);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-block: 4px;
     img {
-      padding: 4px;
-      :nth-child(1) {
-        padding-top: 6px;
-        height: 80px;
+      max-height: 45%;
+      &:nth-child(1) {
+        max-height: 100%;
       }
     }
   }
-  &bottom {
-    position: absolute;
-    bottom: calc(2.5rem - 1vw);
-    left: 0;
-    right: 0;
-    display: flex;
+  &-bottom {
+    @include set-background($color-light);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($space-7, 1fr));
     justify-content: space-evenly;
     align-items: center;
   }

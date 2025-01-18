@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="footer f-1 g-1 p-2">
-      <div className="footer-left g-1 ">
+    <footer className="footer f-1 g-1 px-2 py-3">
+      <div className="footer-left g-2 m-2">
         <p>Complete your style with awesome clothes from us</p>
         <div className="footer-left-btns g-1 h-1 w-2">
           <svg
@@ -34,7 +34,7 @@ const Footer = () => {
           </svg>
         </div>
       </div>
-      <div className="footer-right g-1 ">
+      <div className="footer-right g-1 m-2">
         <div className="footer-right-column g-1">
           <p>Company</p>
           <p>About</p>

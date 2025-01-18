@@ -25,7 +25,7 @@ const SingleCategory = ({ category }) => {
   console.log(filteredProducts)
   return (
     <div className="single-category">
-      <p>Products &gt; {category}</p>
+      <p className="my-2" >Products &gt; {category}</p>
       <ul className="products-container">
         {filteredProducts ? filteredProducts.map(product => <CategoryCard title={product.title} cover={product.image}/>) : "Loading..."}
       </ul>

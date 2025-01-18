@@ -9,17 +9,17 @@ const ProductsCategories = () => {
   return (
     <div className="products-categories">
       <NavLink to="/products/women">
-        <CategoryCard description="Women" cover={category_women} />
+        <CategoryCard title="Women" cover={category_women} />
       </NavLink>
 
       <NavLink to="/products/men">
-        <CategoryCard description="Men" cover={category_men} />
+        <CategoryCard title="Men" cover={category_men} />
       </NavLink>
       <NavLink to="/products/jewelry">
-        <CategoryCard description="Jewelry" cover={category_jewelry} />
+        <CategoryCard title="Jewelry" cover={category_jewelry} />
       </NavLink>
       <NavLink to="/products/electronics">
-        <CategoryCard description="Electronics" cover={category_electronics} />
+        <CategoryCard title="Electronics" cover={category_electronics} />
       </NavLink>
     </div>
   );

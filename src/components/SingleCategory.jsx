@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import productsContext from "../contexts/productsContext";
-import CategoryCard from "./CategoryCard.jsx"
+import Card from "./Card.jsx";
 
 const SingleCategory = ({ category }) => {
   const { products } = useContext(productsContext);
@@ -13,7 +13,7 @@ const SingleCategory = ({ category }) => {
       categoryName = "men's clothing";
       break;
     case "jewelry":
-      categoryName = "jewelery"
+      categoryName = "jewelery";
       break;
     case "electronics":
       categoryName = "electronics";
@@ -22,12 +22,16 @@ const SingleCategory = ({ category }) => {
   const filteredProducts = products.filter(
     (product) => product.category === categoryName
   );
-  console.log(filteredProducts)
+  console.log(filteredProducts);
   return (
     <div className="single-category">
-      <p className="my-2" >Products &gt; {category}</p>
+      <p className="my-2">Products &gt; {category}</p>
       <ul className="products-container">
-        {filteredProducts ? filteredProducts.map(product => <CategoryCard title={product.title} cover={product.image}/>) : "Loading..."}
+        {filteredProducts
+          ? filteredProducts.map((product) => (
+              <Card title={product.title} cover={product.image} />
+            ))
+          : "Loading..."}
       </ul>
     </div>
   );

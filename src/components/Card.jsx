@@ -1,7 +1,7 @@
-const CategoryCard = ({ title, cover }) => {
+const Card = ({ title, cover }) => {
   return (
     <div className="card mx-1 px-1 mb-4">
-      <img className="card-cover" src={cover} height="300" width="200"/>
+      <img className="card-cover" src={cover} />
       <div className="card-info p-1">
         <div>
           <p className="card-title px-1">{title}</p>
@@ -24,4 +24,4 @@ const CategoryCard = ({ title, cover }) => {
   );
 };
 
-export default CategoryCard;
+export default Card;

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import column_top from "../assets/column_top.png";
 import phone_screen from "../assets/phone_screen.png";
-import CategoryCard from "./CategoryCard.jsx";
+import Card from "./Card.jsx";
 
 const Column = () => {
   return (
@@ -34,10 +34,10 @@ const Column = () => {
       <div className="column-middle py-4 px-2">
         <div className="column-middle-cards mb-5">
           <NavLink to="/products/jewelry">
-            <CategoryCard />
+            <Card />
           </NavLink>
           <NavLink to="/products/electronics">
-            <CategoryCard />
+            <Card />
           </NavLink>
         </div>
         <div className="column-middle-info px-2 py-5">

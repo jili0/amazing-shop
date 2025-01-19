@@ -2,17 +2,16 @@ import AboutCard from "./AboutCard";
 
 const About = () => {
   return (
-    <div className="about">
-      <div className="about-top">
-        <div className="about-circle">
+    <div className="about p-2 my-3">
+      <div className="about-top my-2 p-2">
           <img
             width="200"
             height="200"
+            className="mr-2"
             src="https://images.unsplash.com/photo-1486944859394-ed1c44255713?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
-        </div>
-        <div className="about-circle"></div>
+        
         <p className="about-content">
           Our Mission
           <span>ARE YOR LOOKING FOR ...?</span>

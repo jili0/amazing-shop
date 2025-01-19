@@ -26,6 +26,31 @@
         border-radius: 0.2rem;
         box-shadow: $shadow-box;
         font-size: inherit;
+        position: relative;
+        &::after {
+          content: "SHOP NOW";
+          @include set-background($color-tertiary);
+          background-image: linear-gradient(to right bottom, lighten($color-quaternary, 10%) 50%, darken($color-tertiary, 10%) 50%);
+          height: 100%;
+          width: 0px;
+          border-radius: .2rem;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+          transition: 150ms ease-in-out;
+          display: grid;
+          place-content: center;
+        }
+        &:hover {
+          &::after {
+            width: 100%;
+            z-index: 1;
+          }
+        }
+        &:active {
+          opacity: .8;
+        }
       }
     }
     img {

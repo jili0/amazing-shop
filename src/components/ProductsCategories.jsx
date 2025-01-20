@@ -11,7 +11,6 @@ const ProductsCategories = () => {
       <NavLink to="/products/women">
         <Card title="Women" cover={category_women} />
       </NavLink>
-
       <NavLink to="/products/men">
         <Card title="Men" cover={category_men} />
       </NavLink>

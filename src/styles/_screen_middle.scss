@@ -13,9 +13,11 @@
     flex: 1 1 40%;
     margin-left: -2rem;
     &-middle > &-middle-info > img {
-      padding: .3rem;
+      padding: 0.3rem;
     }
-
+  }
+  .product {
+    flex-direction: row;
   }
   .footer {
     flex-direction: row;

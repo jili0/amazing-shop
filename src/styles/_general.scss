@@ -29,9 +29,23 @@ a {
   color: inherit;
   :hover {
     opacity: 0.8;
+    cursor: pointer;
   }
   :active {
     opacity: 0.9;
+  }
+}
+
+.link {
+  position: relative;
+  &:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    height: 1px;
+    width: calc(100% + 4px);
+    background-color: #fff;
   }
 }
 

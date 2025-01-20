@@ -25,14 +25,12 @@ const About = () => {
         <div className="icons p-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
             fill="#000000"
             height="35"
             width="35"
             version="1.1"
             id="Layer_1"
             viewBox="0 0 310 310"
-            xml:space="preserve"
           >
             <g id="XMLID_826_">
               <path
@@ -43,14 +41,12 @@ const About = () => {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
             fill="#000000"
             height="35"
             width="35"
             version="1.1"
             id="Layer_1"
             viewBox="0 0 310 310"
-            xml:space="preserve"
           >
             <g id="XMLID_826_">
               <path
@@ -61,14 +57,12 @@ const About = () => {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
             fill="#000000"
             height="35"
             width="35"
             version="1.1"
             id="Layer_1"
             viewBox="0 0 310 310"
-            xml:space="preserve"
           >
             <g id="XMLID_826_">
               <path
@@ -79,14 +73,12 @@ const About = () => {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
             fill="#000000"
             height="35"
             width="35"
             version="1.1"
             id="Layer_1"
             viewBox="0 0 310 310"
-            xml:space="preserve"
           >
             <g id="XMLID_826_">
               <path

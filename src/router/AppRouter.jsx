@@ -7,7 +7,7 @@ import {
 import Layout from "../pages/Layout.jsx";
 import Home from "../pages/Home.jsx";
 import Products from "../pages/Products.jsx";
-import CustomerService from "../pages/CustomerService.jsx";
+import Support from "../pages/Support.jsx";
 import Account from "../pages/Account.jsx";
 import Cart from "../pages/Cart.jsx";
 import Login from "../pages/Login.jsx";
@@ -21,7 +21,7 @@ const AppRouter = createBrowserRouter(
       <Route path="/products" element={<Products />} />
       <Route path="/products/:category" element={<Products />} />
       <Route path="/products/:category/:id" element={<SingleProduct />} />
-      <Route path="/support" element={<CustomerService />} />
+      <Route path="/support" element={<Support />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/account" element={<Account />} />
       <Route path="/account/login" element={<Login />} />

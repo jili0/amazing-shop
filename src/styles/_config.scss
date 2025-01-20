@@ -3,12 +3,12 @@
   src: url("../fonts/Poppins-ExtraLight.ttf");
 }
 @font-face {
-  font-family: "Poppins-Light";
-  src: url("../fonts/Poppins-Light.ttf");
+  font-family: "Poppins-Regular";
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 @font-face {
-  font-family: "Poppins-Bold";
-  src: url("../fonts/Poppins-Bold.ttf");
+  font-family: "Poppins-Medium";
+  src: url("../fonts/Poppins-Medium.ttf");
 }
 
 // VARIABLES
@@ -19,8 +19,8 @@ $color-quaternary: #f4b942;
 $color-light: rgba(255, 255, 255, 0.7);
 
 $font-stack-thin: "Poppins-ExtraLight", sans-serif;
-$font-stack-normal: "Poppins-Light", sans-serif;
-$font-stack-bold: "Poppins-Bold", sans-serif;
+$font-stack-normal: "Poppins-Medium", sans-serif;
+$font-stack-bold: "Poppins-Regular", sans-serif;
 
 $space-1: calc(1rem + 1vw);
 $space-2: calc(2rem + 2vw);
@@ -33,6 +33,9 @@ $space-8: calc(8rem + 8vw);
 
 $shadow-box: 2px 2px 15px 0 rgba(darken($color-primary, 30), 0.1);
 
+:root {
+  --rate: 3;
+}
 
 // FUNCTIONS
 @function set-text-color($color) {

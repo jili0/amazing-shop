@@ -1,0 +1,74 @@
+.support {
+  min-height: 65vh;
+  &-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .imgContainer {
+      margin-top: calc(-1rem - 1vw);
+      @include set-background($color-secondary);
+      background-image: radial-gradient(
+        at top left,
+        $color-quaternary,
+        $color-tertiary
+      );
+      width: 100%;
+      z-index: -1;
+      img {
+        float: right;
+      }
+    }
+    .contact {
+      position: absolute;
+      top: calc(6rem + 6vw);
+      max-width: calc($space-6 * 2);
+      @include set-background($color-secondary);
+      border-radius: 0.5rem;
+      box-shadow: $shadow-box;
+      h2,
+      h3 {
+        text-align: center;
+        font-family: $font-stack-bold;
+      }
+    }
+  }
+  &-middle {
+    @include set-background(lighten($color-tertiary, 50%));
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .space {
+      height: 50%;
+      width: 100%;
+    }
+    form {
+      width: 100%;
+      height: 50%;
+      border: 2px solid darken($color-quaternary, 10%);
+      border-radius: 4px;
+      max-width: 24rem;
+      float: right;
+      display: flex;
+      flex-direction: column;
+      input,
+      textarea {
+        padding: 2px 4px;
+        outline: none;
+        box-shadow: none;
+        border: 1px solid lighten($color-primary, 40%);
+        border-radius: 4px;
+        &::placeholder {
+          color: lighten($color-primary, 40%);
+          font-family: $font-stack-thin;
+        }
+      }
+      button {
+        @include set-background($color-quaternary);
+        border-radius: 4px;
+      }
+    }
+  }
+  &-bottom {
+  }
+}

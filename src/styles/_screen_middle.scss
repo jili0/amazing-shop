@@ -13,9 +13,23 @@
     flex: 1 1 40%;
     margin-left: -2rem;
     &-middle > &-middle-info > img {
-      padding: .3rem;
+      padding: 0.3rem;
     }
-
+  }
+  .product {
+    flex-direction: row;
+  }
+  .support {
+    &-top {
+      justify-content: flex-start;
+    }
+    &-middle {
+      height: 40vh;
+      flex-direction: row;
+      form {
+        height: 100%;
+      }
+    }
   }
   .footer {
     flex-direction: row;

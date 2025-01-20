@@ -30,26 +30,32 @@
         &::after {
           content: "SHOP NOW";
           @include set-background($color-tertiary);
-          background-image: linear-gradient(to right bottom, lighten($color-quaternary, 10%) 50%, darken($color-tertiary, 10%) 50%);
+          background-image: linear-gradient(
+            to right bottom,
+            lighten($color-quaternary, 10%) 50%,
+            darken($color-tertiary, 10%) 50%
+          );
           height: 100%;
           width: 0px;
-          border-radius: .2rem;
+          border-radius: 0.2rem;
           position: absolute;
           left: 0;
           top: 0;
           z-index: -1;
-          transition: 150ms ease-in-out;
+          transition: 50ms ease-in-out;
           display: grid;
           place-content: center;
+          color: transparent;
         }
         &:hover {
           &::after {
             width: 100%;
             z-index: 1;
+            color: $color-primary;
           }
         }
         &:active {
-          opacity: .8;
+          opacity: 0.8;
         }
       }
     }

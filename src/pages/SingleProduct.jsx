@@ -26,6 +26,21 @@ const SingleProduct = () => {
   const filteredProduct = products.filter(
     (product) => product.id === Number(productParam.id)
   )[0];
+  let categoryName;
+  switch (filteredProduct.category) {
+    case "women's clothing":
+      categoryName = "women";
+      break;
+    case "men's clothing":
+      categoryName = "men";
+      break;
+    case "jewelery":
+      categoryName = "jewelry";
+      break;
+    case "electronics":
+      categoryName = "electronics";
+      break;
+  }
   filteredProduct &&
     document.body.style.setProperty("--rate", filteredProduct.rating.rate);
   if (!filteredProduct) {
@@ -38,8 +53,8 @@ const SingleProduct = () => {
           Products
         </NavLink>
         &nbsp;&gt;&nbsp;
-        <NavLink to={`/products/${filteredProduct.category}`} className="link">
-          {filteredProduct.category}
+        <NavLink to={`/products/${categoryName}`} className="link">
+          {categoryName}
         </NavLink>
       </p>
       <div className="product m-1 p-1">

@@ -19,6 +19,18 @@
   .product {
     flex-direction: row;
   }
+  .support {
+    &-top {
+      justify-content: flex-start;
+    }
+    &-middle {
+      height: 40vh;
+      flex-direction: row;
+      form {
+        height: 100%;
+      }
+    }
+  }
   .footer {
     flex-direction: row;
     &-right {

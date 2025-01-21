@@ -37,7 +37,7 @@ const Hero = () => {
         <img height="100" src={logo_obey} alt="logo_obey" />
         <img height="100" src={logo_shopify} alt="logo_shopify" />
       </div>
-      <div className="hero-bottom pt-4">
+      <div className="hero-bottom px-2 py-4 gx-2 gy-4">
         <NavLink to="/products/women">
           <Card title="Women" cover={category_women} />
         </NavLink>

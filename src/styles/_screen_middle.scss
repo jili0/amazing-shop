@@ -16,22 +16,22 @@
       padding: 0.3rem;
     }
   }
-  .product {
-    flex-direction: row;
-  }
+
   .support {
     &-top {
       justify-content: flex-start;
     }
     &-middle {
-      height: 40vh;
       flex-direction: row;
+      .contact {
+        transform: translateY(calc(-4rem - 4vw));
+      }
       form {
         height: 100%;
       }
     }
   }
-  .footer {
+  footer > .footer {
     flex-direction: row;
     &-right {
       width: 45%;

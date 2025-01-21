@@ -25,14 +25,14 @@ const Column = () => {
           </svg>
         </div>
         <img
-          className="pt-3 w-3"
+          className="h-6 mr-2"
           src={column_top}
           alt="a man looking surprised"
         />
       </div>
 
       <div className="column-middle py-4 px-2">
-        <div className="column-middle-cards mb-5">
+        <div className="column-middle-cards mb-2 gx-2 gy-4">
           <NavLink to="/products/jewelry">
             <Card />
           </NavLink>
@@ -40,14 +40,14 @@ const Column = () => {
             <Card />
           </NavLink>
         </div>
-        <div className="column-middle-info px-2 py-5">
-          <div className="g-1">
-            <p>Lorem ipsum dolor sit amet.</p>
+        <div className="column-middle-info px-2 py-4 g-1">
+          <div className="g-2">
+            <p className="f-2">Lorem ipsum dolor sit amet.</p>
             <button className="px-1 f-1">Apple Store</button>
             <button className="px-1 f-1">Google Play</button>
           </div>
           <img
-            width="50"
+            width="150"
             className="p-1"
             src={phone_screen}
             alt="phone screen"
@@ -59,7 +59,7 @@ const Column = () => {
         <p>Lorem ipsum dolor sit amet!</p>
         <p>Lorem ipsum dolor</p>
         <input
-          className="m-1 p-1 f-1"
+          className="m-1 px-1 f-1"
           type="text"
           placeholder="Lorem ipsum dolor"
         />

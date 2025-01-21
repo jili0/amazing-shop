@@ -24,6 +24,11 @@ body {
   );
 }
 
+main {
+  max-width: calc(40rem + 30vw);
+  margin-inline: auto;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -58,4 +63,11 @@ button {
   :active {
     opacity: 0.9;
   }
+}
+
+button,
+input,
+textarea {
+  border-radius: $radius;
+  padding: .4rem;
 }

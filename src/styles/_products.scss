@@ -12,7 +12,7 @@
     display: none;
   }
   .card-info {
-    border-radius:$radius;
+    border-radius: $radius;
     @include set-background($color-tertiary);
     background-image: linear-gradient(
       65deg,
@@ -24,33 +24,29 @@
 
 .single-category {
   min-height: 68vh;
-}
 
-.products-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  align-items: start;
-  justify-content: center;
-  .card-cover {
-    object-fit: contain;
-    background-image: linear-gradient(
-      to right bottom,
-      #fff 90%,
-      darken($color-tertiary, 20%) 90%,
-      darken($color-tertiary, 20%) 95%,
-      lighten($color-quaternary, 10%) 95%
-    );
-    object-position: center;
-    padding: 1rem;
-  }
-  .card-info {
-    padding-inline: 2px;
-    @include set-background($color-light);
-    .card-title {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: $space-6;
+  .products-container {
+    @include set-card-grid();
+    .card-cover {
+      object-fit: contain;
+      background-image: linear-gradient(
+        to right bottom,
+        #fff 90%,
+        darken($color-tertiary, 20%) 90%,
+        darken($color-tertiary, 20%) 95%,
+        lighten($color-quaternary, 10%) 95%
+      );
+      object-position: center;
+      padding: 1rem;
+    }
+    .card-info {
+      @include set-background($color-light);
+      .card-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: $space-6;
+      }
     }
   }
 }

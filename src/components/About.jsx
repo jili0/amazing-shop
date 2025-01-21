@@ -147,7 +147,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="about-bottom my-2 p-5">
+      <div className="about-bottom p-6 g-4 ">
         <Card title="title" cover={about_bottom_phone} />
         <Card title="title" cover={about_bottom_phone} />
         <Card title="title" cover={about_bottom_phone} />

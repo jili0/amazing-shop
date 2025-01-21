@@ -1,7 +1,7 @@
 const Card = ({ title, cover }) => {
   return (
     <div className="card">
-      <img className="card-cover w-2 h-4" src={cover} />
+      <img className="card-cover p-1 w-2 h-4" src={cover} />
       <div className="card-info w-2 h-1 px-1 f-1">
         <p className="card-title">{title}</p>
         <button>

@@ -21,6 +21,9 @@ header {
 nav {
   max-width: calc(40rem + 35vw);
   margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   ul {
     list-style-type: none;
     display: flex;
@@ -40,6 +43,25 @@ nav {
     }
     a {
       text-shadow: 0 0 10px rgba(2, 2, 2, 0.9);
+    }
+  }
+  button {
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    &::after {
+      content: attr(cart-amount);
+      content: "1";
+      color: $color-primary;
+      background-color: #fff;
+      padding-inline: 4px;
+      min-height: fit-content;
+      min-width: fit-content;
+      position: absolute;
+      top: -15%;
+      right: -15%;
+      font-size: 12px;
+      border-radius: 10px;
     }
   }
 }

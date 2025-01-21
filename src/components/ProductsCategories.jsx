@@ -7,7 +7,7 @@ import category_electronics from "../assets/category_others.png";
 
 const ProductsCategories = () => {
   return (
-    <div className="products-categories">
+    <div className="products-categories p-2 g-1">
       <NavLink to="/products/women">
         <Card title="Women" cover={category_women} />
       </NavLink>

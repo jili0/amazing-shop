@@ -57,7 +57,7 @@ $radius: calc(2px + 0.2vw);
 @mixin set-card-grid() {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(auto-fill, minmax($space-6, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax($space-7, 1fr));
 }
 
 // CLASSES

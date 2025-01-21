@@ -19,6 +19,8 @@ header {
 }
 
 nav {
+  max-width: calc(40rem + 35vw);
+  margin-inline: auto;
   ul {
     list-style-type: none;
     display: flex;

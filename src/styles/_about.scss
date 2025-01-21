@@ -1,5 +1,5 @@
 .about {
-  border-radius: 4px;
+  border-radius: $radius;
   @include set-background(lighten($color-tertiary, 10%));
   &-top,
   &-middle-top,

@@ -1,11 +1,9 @@
 const Card = ({ title, cover }) => {
   return (
-    <div className="card mx-1 px-1 mb-4">
-      <img className="card-cover" src={cover} />
-      <div className="card-info p-1">
-        <div>
-          <p className="card-title px-1">{title}</p>
-        </div>
+    <div className="card">
+      <img className="card-cover w-2 h-4" src={cover} />
+      <div className="card-info w-2 h-1 px-1 f-1">
+        <p className="card-title">{title}</p>
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"

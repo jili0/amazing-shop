@@ -1,46 +1,51 @@
-.footer {
+footer {
   @include set-background(#fff);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   box-shadow: $shadow-box;
-  line-height: 1.2;
-  &-left {
+  .footer {
+    max-width: calc(40rem + 35vw);
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    p {
-      text-align: center;
-      white-space: wrap;
-    }
-    &-btns {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      svg {
-        background-color: $color-quaternary;
-        border-radius: 0.4rem;
-        padding: 2px;
-      }
-    }
-  }
-  &-right {
-    display: flex;
     justify-content: space-evenly;
-    align-items: flex-start;
-    width: calc(100% - 10vw);
-    &-column {
-      border-left: solid 1px lighten($color-primary, 40%);
-      padding: 0.4rem;
-      flex: 1 1 100px;
+    align-items: center;
+    line-height: 1.2;
+    &-left {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
+      align-items: center;
       p {
-        &:nth-child(1) {
-          color: lighten($color-primary, 10%);
+        text-align: center;
+        white-space: wrap;
+      }
+      &-btns {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        svg {
+          background-color: $color-quaternary;
+          border-radius: $radius;
+          padding: 2px;
+          max-width: 2.5rem;
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      width: calc(100% - 10vw);
+      &-column {
+        border-left: solid 1px lighten($color-primary, 40%);
+        padding: 0.4rem;
+        flex: 1 1 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        p {
+          &:nth-child(1) {
+            color: lighten($color-primary, 10%);
+          }
         }
       }
     }

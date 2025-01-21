@@ -22,16 +22,17 @@ $font-stack-thin: "Poppins-ExtraLight", sans-serif;
 $font-stack-normal: "Poppins-Medium", sans-serif;
 $font-stack-bold: "Poppins-Regular", sans-serif;
 
-$space-1: calc(1rem + 1vw);
-$space-2: calc(2rem + 2vw);
-$space-3: calc(3rem + 3vw);
-$space-4: calc(4rem + 4vw);
-$space-5: calc(5rem + 5vw);
-$space-6: calc(6rem + 6vw);
-$space-7: calc(7rem + 7vw);
-$space-8: calc(8rem + 8vw);
+$space-1: calc(1rem + min(1vw, 6rem));
+$space-2: calc(2rem + min(2vw, 6rem));
+$space-3: calc(3rem + min(3vw, 6rem));
+$space-4: calc(4rem + min(4vw, 6rem));
+$space-5: calc(5rem + min(5vw, 6rem));
+$space-6: calc(6rem + min(6vw, 6rem));
+$space-7: calc(7rem + min(7vw, 6rem));
+$space-8: calc(8rem + min(8vw, 6rem));
 
 $shadow-box: 2px 2px 15px 0 rgba(darken($color-primary, 30), 0.1);
+$radius: calc(2px + 0.2vw);
 
 :root {
   --rate: 3;
@@ -52,71 +53,84 @@ $shadow-box: 2px 2px 15px 0 rgba(darken($color-primary, 30), 0.1);
   color: set-text-color($color);
 }
 
+@mixin set-card-grid() {
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax($space-6, 1fr));
+}
+
 // CLASSES
-$levels: (1, 2, 3, 4, 5);
+$levels: (1, 2, 3, 4, 5, 6);
 @each $level in $levels {
   // margin
   .m-#{$level} {
-    margin: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    margin: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .mx-#{$level} {
-    margin-inline: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    margin-inline: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .my-#{$level} {
-    margin-block: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    margin-block: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .mt-#{$level} {
-    margin-top: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    margin-top: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .mr-#{$level} {
-    margin-right: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    margin-right: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .mb-#{$level} {
-    margin-bottom: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    margin-bottom: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .ml-#{$level} {
-    margin-left: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    margin-left: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
 
   // padding
   .p-#{$level} {
-    padding: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    padding: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .px-#{$level} {
-    padding-inline: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    padding-inline: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .py-#{$level} {
-    padding-block: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    padding-block: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .pt-#{$level} {
-    padding-top: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    padding-top: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .pr-#{$level} {
-    padding-right: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    padding-right: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .pb-#{$level} {
-    padding-bottom: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    padding-bottom: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
   .pl-#{$level} {
-    padding-left: calc(#{calc($level * 0.1)}rem + #{$level}vw);
+    padding-left: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 2rem));
   }
 
   // gap
   .g-#{$level} {
-    gap: calc(#{calc($level / 8)}rem + #{$level}vw);
+    gap: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 1rem));
+  }
+  .gx-#{$level} {
+    column-gap: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 1rem));
+  }
+  .gy-#{$level} {
+    row-gap: calc(#{calc($level * 0.1)}rem + min(#{$level}vw, 1rem));
   }
 
   // height
   .h-#{$level} {
-    height: calc(#{calc($level * 1.2)}rem + #{calc($level * 2)}vw);
+    height: calc(#{calc($level * 1.2)}rem + min(#{calc($level * 2)}vw, 10rem));
   }
   // width
   .w-#{$level} {
-    width: calc(#{$level}rem + #{calc($level * 10)}vw);
+    width: calc(#{$level}rem + min(#{calc($level * 10)}vw, 10rem));
   }
   // font-size
   .f-#{$level} {
-    font-size: calc(#{calc($level * 2 + 10)}px + #{calc($level * 0.1)}vw);
+    font-size: calc(#{calc($level * 0.8 + 11)}px + #{calc($level * 0.2)}vw);
   }
 }
 

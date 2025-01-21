@@ -11,7 +11,7 @@ import Support from "../pages/Support.jsx";
 import Account from "../pages/Account.jsx";
 import Cart from "../pages/Cart.jsx";
 import Login from "../pages/Login.jsx";
-import SingleProduct from "../pages/SingleProduct.jsx";
+import Product from "../pages/Product.jsx";
 import NotFound from "../pages/NotFound.jsx";
 
 const AppRouter = createBrowserRouter(
@@ -20,7 +20,7 @@ const AppRouter = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="/products" element={<Products />} />
       <Route path="/products/:category" element={<Products />} />
-      <Route path="/products/:category/:id" element={<SingleProduct />} />
+      <Route path="/products/:category/:id" element={<Product />} />
       <Route path="/support" element={<Support />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/account" element={<Account />} />

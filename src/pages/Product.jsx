@@ -2,7 +2,7 @@ import { useParams, NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import productsContext from "../contexts/productsContext";
 
-const SingleProduct = () => {
+const Product = () => {
   const productParam = useParams();
   const { products, setProducts } = useContext(productsContext);
   if (!products.length) {
@@ -66,15 +66,14 @@ const SingleProduct = () => {
             className="w-3 p-1"
           />
           <div className="product-short-info mx-1">
-            <p className="title mb-1">{filteredProduct.title}</p>
+            <p className="title mb-1 f-3">{filteredProduct.title}</p>
             <p className="rate mb-2">
-              <span className="rating-stars">
-                ☆☆☆☆☆ {filteredProduct.rating.rate}{" "}
-              </span>
+              <span className="rating-stars">☆☆☆☆☆</span>
+              {filteredProduct.rating.rate}
               &nbsp; ({filteredProduct.rating.count})
             </p>
 
-            <p className="price">{filteredProduct.price} €</p>
+            <p className="price f-3 px-2">{filteredProduct.price} €</p>
             <button className="addToCartBtn p-1 mt-1">Add to cart</button>
           </div>
         </div>
@@ -91,4 +90,4 @@ const SingleProduct = () => {
   );
 };
 
-export default SingleProduct;
+export default Product;

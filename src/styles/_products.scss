@@ -1,17 +1,13 @@
 /* Products */
 
 .products-categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  @include set-card-grid();
   border-radius: $radius;
-  .card {
-    margin-block: 0.4rem;
-    margin-inline: 0.2rem;
-  }
   .card-cover {
     display: none;
   }
   .card-info {
+    width: 80%;
     border-radius: $radius;
     @include set-background($color-tertiary);
     background-image: linear-gradient(

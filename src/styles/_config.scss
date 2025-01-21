@@ -27,9 +27,10 @@ $space-2: calc(2rem + min(2vw, 6rem));
 $space-3: calc(3rem + min(3vw, 6rem));
 $space-4: calc(4rem + min(4vw, 6rem));
 $space-5: calc(5rem + min(5vw, 6rem));
-$space-6: calc(6rem + min(6vw, 6rem));
-$space-7: calc(7rem + min(7vw, 6rem));
-$space-8: calc(8rem + min(8vw, 6rem));
+$space-6: calc(6rem + min(6vw, 7rem));
+$space-7: calc(7rem + min(7vw, 8rem));
+$space-8: calc(8rem + min(8vw, 9rem));
+$space-9: calc(9rem + min(9vw, 10rem));
 
 $shadow-box: 2px 2px 15px 0 rgba(darken($color-primary, 30), 0.1);
 $radius: calc(2px + 0.2vw);
@@ -55,8 +56,7 @@ $radius: calc(2px + 0.2vw);
 
 @mixin set-card-grid() {
   display: grid;
-  justify-content: space-evenly;
-  align-items: center;
+  place-content: center;
   grid-template-columns: repeat(auto-fill, minmax($space-6, 1fr));
 }
 

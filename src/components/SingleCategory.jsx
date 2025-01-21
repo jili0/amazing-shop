@@ -52,7 +52,7 @@ const SingleCategory = ({ category }) => {
           {category}
         </NavLink>
       </p>
-      <ul className="products-container">
+      <ul className="products-container px-2 py-4 gx-2 gy-4">
         {filteredProducts
           ? filteredProducts.map((product) => (
               <NavLink

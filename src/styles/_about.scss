@@ -134,23 +134,19 @@
     }
   }
   &-bottom {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    border-radius: 4px;
+    @include set-card-grid();
+    grid-template-columns: repeat(auto-fill, minmax($space-9, 0.5fr));
     .card {
-      @include set-background($color-quaternary);
-      padding: 0;
     }
     .card-cover {
-      background-color: transparent;
-      object-fit: cover;
+      @include set-background($color-quaternary);
+      object-fit: contain;
       object-position: center;
-      width: 100%;
-      height: 100%;
-      padding: $space-4;
+      width: 80%;
+      padding: $space-1;
     }
     .card-info {
-      width: 100%;
+      width: 80%;
     }
   }
 }

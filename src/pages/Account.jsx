@@ -1,11 +1,11 @@
+import Cart from "../components/Cart.jsx";
 
 const Account = () => {
   return (
     <div>
-      Account
-      
+      <Cart />
     </div>
-  )
-}
+  );
+};
 
-export default Account
+export default Account;

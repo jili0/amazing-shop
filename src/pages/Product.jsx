@@ -1,10 +1,12 @@
 import { useParams, NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import productsContext from "../contexts/productsContext";
+import cartContext from "../contexts/cartContext";
 
 const Product = () => {
   const productParam = useParams();
   const { products, setProducts } = useContext(productsContext);
+  const { cart, setCart } = useContext(cartContext);
   if (!products.length) {
     useEffect(() => {
       const fetchProducts = async () => {
@@ -27,7 +29,7 @@ const Product = () => {
     (product) => product.id === Number(productParam.id)
   )[0];
   let categoryName;
-  switch (filteredProduct.category) {
+  switch (productParam.category) {
     case "women's clothing":
       categoryName = "women";
       break;
@@ -46,6 +48,17 @@ const Product = () => {
   if (!filteredProduct) {
     return "Loading...";
   }
+
+  const addToCart = () => {
+    if (cart.length) {
+      setCart((prev) => prev.push(filteredProduct));
+    } else {
+      console.log("else");
+      setCart(filteredProduct);
+    }
+
+    console.log(cart);
+  };
   return (
     <>
       <p className="my-2">
@@ -74,7 +87,9 @@ const Product = () => {
             </p>
 
             <p className="price f-3 px-2">{filteredProduct.price} €</p>
-            <button className="addToCartBtn p-1 mt-1">Add to cart</button>
+            <button className="addToCartBtn p-1 mt-1" onClick={addToCart}>
+              Add to cart
+            </button>
           </div>
         </div>
         <div className="product-bottom px-3 my-3 py-2">

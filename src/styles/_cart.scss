@@ -1,3 +1,66 @@
 .cart {
-  @include set-background(lighten($color-tertiary, 40%))
+  @include set-background(lighten($color-tertiary, 40%));
+  border-radius: $radius;
+  box-shadow: $shadow-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  &-left {
+    hr {
+      background-color: none;
+      border: 1px solid lighten($color-primary, 30%);
+    }
+  }
+  &-right {
+    @include set-background(darken($color-primary, 10%));
+    border-radius: $radius;
+    box-shadow: $shadow-box;
+    img {
+      border-radius: $radius;
+      height: $space-2;
+    }
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        font-family: $font-stack-normal;
+      }
+      img {
+        width: $space-2;
+      }
+    }
+    .card-type-images {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    input {
+      width: 100%;
+      border: none;
+      outline: none;
+      @include set-background(darken($color-primary, 5%));
+    }
+    .half-width {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .payment-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include set-background(darken($color-tertiary, 20%));
+    }
+  }
 }

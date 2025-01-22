@@ -1,21 +1,21 @@
 const CartItem = () => {
   return (
-    <div className="cart-item">
-      <img src="" alt="" />
+    <div className="cart-item my-1 py-1 px-2 g-1">
+      <img src="" alt="" className="m-1" />
       <div>
-        <p>Italy Pizza</p>
-        <p>Extra cheese and topping</p>
+        <h3 className="f-2">Italy Pizza</h3>
+        <p className="f-1">Extra cheese and topping</p>
       </div>
-      <div>
+      <div className="amount">
         <span>1</span>
         <div>
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
+              viewBox="300 -680 360 180"
               fill="#FFF"
+              height="20"
+              width="20"
             >
               <path d="m280-400 200-200 200 200H280Z" />
             </svg>
@@ -23,9 +23,9 @@ const CartItem = () => {
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
+              viewBox="300 -460 360 180"
+              height="20"
+              width="20"
               fill="#FFF"
             >
               <path d="M480-360 280-560h400L480-360Z" />
@@ -33,8 +33,8 @@ const CartItem = () => {
           </button>
         </div>
       </div>
-      <p>
-        <span>81</span>€
+      <p className="nowrap">
+        <span>81</span> €
       </p>
       <button>
         <svg

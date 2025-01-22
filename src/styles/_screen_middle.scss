@@ -7,7 +7,6 @@
     margin-right: 0;
     margin-block: $space-2;
   }
-
   .column {
     z-index: -1;
     flex: 1 1 40%;
@@ -16,7 +15,6 @@
       padding: 0.3rem;
     }
   }
-
   .support {
     &-top {
       justify-content: flex-start;
@@ -30,6 +28,9 @@
         height: 100%;
       }
     }
+  }
+  .cart {
+    flex-direction: row;
   }
   footer > .footer {
     flex-direction: row;

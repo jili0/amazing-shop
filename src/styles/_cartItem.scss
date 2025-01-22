@@ -1,0 +1,36 @@
+.cart-item {
+  box-shadow: $shadow-box;
+  border-radius: $radius;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    border-radius: $radius;
+    height: $space-3;
+    width: $space-3;
+  }
+  button {
+    background-color: transparent;
+    padding: 0;
+    height: min-content;
+    svg {
+      fill: #333;
+    }
+  }
+  .amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc(2px + min(1vw, 1rem));
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: calc($space-1 / 2);
+        height: calc($space-1 / 2);
+      }
+    }
+  }
+}

@@ -22,7 +22,7 @@ const Cart = () => {
   });
 
   return (
-    <div className="cart p-3 m-2 g-2" ref={cartRef}>
+    <div className="cart p-3 m-2 g-2" ref={cartRef} style={{"display":"none"}}>
       <div className="cart-left">
         <p onClick={hideCart}>&lt; Continue Shopping</p>
         <hr className="my-2" />

@@ -1,33 +1,44 @@
+// Error: Rendered more hooks than during the previous render.
+// info von react doc: Do not call Hooks inside functions passed to useMemo, useReducer, or useEffect.
+// https://react.dev/warnings/invalid-hook-call-warning
+
 import { useParams, NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+
 import productsContext from "../contexts/productsContext";
 import cartContext from "../contexts/cartContext";
+import Cart from "../components/Cart.jsx";
+import { addToCart } from "../stores/cart.js";
 
 const Product = () => {
   const productParam = useParams();
   const { products, setProducts } = useContext(productsContext);
   const { cart, setCart } = useContext(cartContext);
-  if (!products.length) {
-    useEffect(() => {
-      const fetchProducts = async () => {
-        const url = "https://fakestoreapi.com/products";
-        try {
-          const res = await fetch(url);
-          if (!res.ok) {
-            throw new Error("Response is not ok");
-          }
-          const data = await res.json();
-          setProducts(data);
-        } catch (error) {
-          console.error(error);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const url = "https://fakestoreapi.com/products";
+      try {
+        const res = await fetch(url);
+        if (!res.ok) {
+          throw new Error("Response is not ok");
         }
-      };
+        const data = await res.json();
+        setProducts(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    if (!products.length) {
       fetchProducts();
-    }, []);
-  }
+    }
+  }, []);
+
   const filteredProduct = products.filter(
     (product) => product.id === Number(productParam.id)
   )[0];
+
   let categoryName;
   switch (productParam.category) {
     case "women's clothing":
@@ -49,16 +60,19 @@ const Product = () => {
     return "Loading...";
   }
 
-  const addToCart = () => {
-    if (cart.length) {
-      setCart((prev) => prev.push(filteredProduct));
-    } else {
-      console.log("else");
-      setCart(filteredProduct);
-    }
+  const carts = useSelector((store) => store.cart.items);
 
-    console.log(cart);
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(
+      addToCart({
+        productId: filteredProduct.id,
+        quantity: 1,
+      })
+    );
+    setCart(carts);
   };
+
   return (
     <>
       <p className="my-2">
@@ -87,7 +101,7 @@ const Product = () => {
             </p>
 
             <p className="price f-3 px-2">{filteredProduct.price} €</p>
-            <button className="addToCartBtn p-1 mt-1" onClick={addToCart}>
+            <button className="addToCartBtn p-1 mt-1" onClick={handleAddToCart}>
               Add to cart
             </button>
           </div>

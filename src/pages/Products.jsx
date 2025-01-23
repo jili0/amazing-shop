@@ -4,6 +4,7 @@ import { useContext, useEffect } from "react";
 import ProductsCategories from "../components/ProductsCategories";
 import SingleCategory from "../components/SingleCategory";
 import About from "../components/About";
+import Cart from "../components/Cart.jsx";
 import productsContext from "../contexts/productsContext";
 
 const Products = () => {

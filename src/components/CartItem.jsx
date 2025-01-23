@@ -1,13 +1,14 @@
-const CartItem = () => {
+const CartItem = ({product, quantity}) => {
+  console.log(product, quantity)
   return (
     <div className="cart-item my-1 py-1 px-2 g-1">
-      <img src="" alt="" className="m-1" />
+      <img src={product.image} alt={product.title} className="m-1" />
       <div>
-        <h3 className="f-2">Italy Pizza</h3>
-        <p className="f-1">Extra cheese and topping</p>
+        <h3 className="f-2">{product.title.slice(0, 35)} ...</h3>
+        <p className="f-1">{product.description.slice(0, 50)} ...</p>
       </div>
       <div className="amount">
-        <span>1</span>
+        <span>{quantity}</span>
         <div>
           <button>
             <svg
@@ -34,7 +35,7 @@ const CartItem = () => {
         </div>
       </div>
       <p className="nowrap">
-        <span>81</span> €
+        <span>{product.price}</span> €
       </p>
       <button>
         <svg

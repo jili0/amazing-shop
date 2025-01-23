@@ -1,4 +1,5 @@
 import contact from "../assets/contact.png";
+import Cart from "../components/Cart.jsx";
 
 const Support = () => {
   return (

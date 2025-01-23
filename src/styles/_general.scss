@@ -11,7 +11,9 @@ html {
 body {
   @include set-background(darken($color-primary, 30%));
   font-family: $font-stack-thin;
+  height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
   background-image: linear-gradient(
     to left bottom,
     darken($color-primary, 20%) 25%,

@@ -1,5 +1,6 @@
 import Hero from "../components/Hero.jsx";
 import Column from "../components/Column.jsx";
+import Cart from "../components/Cart.jsx";
 import { useEffect, useContext } from "react";
 import productsContext from "../contexts/productsContext.jsx";
 

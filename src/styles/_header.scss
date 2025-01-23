@@ -49,9 +49,7 @@ nav {
     background-color: transparent;
     padding: 0;
     position: relative;
-    &::after {
-      content: attr(cart-amount);
-      content: "1";
+    p {
       color: $color-primary;
       background-color: #fff;
       padding-inline: 4px;
@@ -61,7 +59,7 @@ nav {
       top: -15%;
       right: -15%;
       font-size: 12px;
-      border-radius: 10px;
+      border-radius: 4px;
     }
   }
 }

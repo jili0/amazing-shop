@@ -1,5 +1,11 @@
 .cart {
-  border: solid 5px #aaa;
+  position: absolute;
+  top: $space-1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100vh;
+  max-width: calc(25rem + 35vw);
   @include set-background(lighten($color-tertiary, 40%));
   border-radius: $radius;
   box-shadow: $shadow-box;
@@ -7,7 +13,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  max-height: 90vh;
   overflow-y: scroll;
   &-left {
     hr {

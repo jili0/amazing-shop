@@ -32,7 +32,7 @@ $space-7: calc(7rem + min(7vw, 8rem));
 $space-8: calc(8rem + min(8vw, 9rem));
 $space-9: calc(9rem + min(9vw, 10rem));
 
-$shadow-box: 2px 2px 15px 0 rgba(darken($color-primary, 30), 0.1);
+$shadow-box: 2px 2px 3px 1px rgba(darken($color-primary, 30), 0.2);
 $radius: calc(2px + 0.2vw);
 
 :root {

@@ -6,7 +6,6 @@ import productsContext from "../contexts/productsContext";
 const Cart = () => {
   const cartRef = useRef();
   const hideCart = () => {
-    console.log(cartRef.current, cartRef.current.style.display);
     cartRef.current.style.display = "none";
     document.body.style.overflowY = "scroll";
   };
@@ -22,7 +21,7 @@ const Cart = () => {
   });
 
   return (
-    <div className="cart p-3 m-2 g-2" ref={cartRef} style={{"display":"none"}}>
+    <div className="cart p-3 my-1 g-2" ref={cartRef} style={{"display":"none"}}>
       <div className="cart-left">
         <p onClick={hideCart}>&lt; Continue Shopping</p>
         <hr className="my-2" />

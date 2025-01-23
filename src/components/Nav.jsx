@@ -50,7 +50,7 @@ const Nav = () => {
           </p>
         </button>
       </nav>
-      <div ref={cartRef}>
+      <div ref={cartRef} >
         <Cart />
       </div>
     </>

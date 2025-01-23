@@ -14,14 +14,20 @@ const About = () => {
             alt=""
           />
         </div>
-        <p className="content mb-3">
-          Our Mission
-          <span>ARE YOR LOOKING FOR ...?</span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-          explicabo iure in obcaecati labore quod quasi vitae? Consequatur
-          soluta eum a. Quis dicta quisquam amet quidem illo blanditiis quae
-          aliquid.
-        </p>
+        <div className="content mb-3">
+          <p className="mb-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+            explicabo iure in obcaecati labore quod quasi vitae? Consequatur
+            soluta eum a. Quis dicta quisquam amet quidem illo blanditiis quae
+            aliquid.
+          </p>
+          <p>
+            Quis dicta quisquam amet quidem illo blanditiis quae aliquid. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Magni explicabo
+            iure in obcaecati labore quod quasi vitae? Consequatur soluta eum a.
+            Quis dicta quisquam amet quidem illo blanditiis quae aliquid.
+          </p>
+        </div>
         <div className="icons p-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -99,6 +105,12 @@ const About = () => {
               alt=""
             />
           </div>
+          <p className="mb-3">
+            Quis dicta quisquam amet quidem illo blanditiis quae aliquid. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Magni explicabo
+            iure in obcaecati labore quod quasi vitae? Consequatur soluta eum a.
+            Quis dicta quisquam amet quidem illo blanditiis quae aliquid.
+          </p>
           <p className="mb-3">
             <span>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem

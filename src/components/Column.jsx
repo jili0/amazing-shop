@@ -34,10 +34,10 @@ const Column = () => {
       <div className="column-middle py-4 px-2">
         <div className="column-middle-cards mb-2 gx-2 gy-4">
           <NavLink to="/products/jewelry">
-            <Card />
+            <Card cover="https://images.unsplash.com/photo-1495908333425-29a1e0918c5f?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
           </NavLink>
           <NavLink to="/products/electronics">
-            <Card />
+            <Card cover="https://images.unsplash.com/photo-1524404794194-16bae22718c0?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
           </NavLink>
         </div>
         <div className="column-middle-info px-2 py-4 g-1">

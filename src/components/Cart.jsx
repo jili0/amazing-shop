@@ -34,7 +34,7 @@ const Cart = () => {
         boxShadow: "none",
       }}
     >
-      <div className="cart-left p-2">
+      <div className="cart-left my-3 p-2">
         <p onClick={hideCart}>&lt; Continue Shopping</p>
         <hr className="my-2" />
         <h2 className="f-2">Shopping Cart</h2>

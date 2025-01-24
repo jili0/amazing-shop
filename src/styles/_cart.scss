@@ -1,14 +1,17 @@
 .cart {
-  position: absolute;
-  top: $space-1;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
   height: 100vh;
+  box-shadow: 2px 2px 3px 1px rgba(23, 32, 61, .2);
+  padding: calc(.3rem + min(3vw, 2rem));
+  transition: .15s ease-in-out;
+  overflow-x: hidden;
+  position: absolute;
+  top: $space-1;
+  right: 50%;
+  transform: translateX(50%);
   max-width: calc(25rem + 35vw);
   @include set-background(lighten($color-tertiary, 40%));
   border-radius: $radius;
-  box-shadow: $shadow-box;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

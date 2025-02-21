@@ -40,7 +40,11 @@ const Cart = () => {
           You have <span>{totalItems}</span> item<span>s</span> in your cart
         </p>
         {cartDetails.map((item) => (
-          <CartItem product={item.itemDetails} quantity={item.itemQuantity} />
+          <CartItem
+            product={item.itemDetails}
+            quantity={item.itemQuantity}
+            key={item.itemDetails.title}
+          />
         ))}
       </div>
       <div className="cart-right my-3 p-2">

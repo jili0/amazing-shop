@@ -1,7 +1,7 @@
 const CartItem = ({product, quantity}) => {
   console.log(product, quantity)
   return (
-    <div className="cart-item my-1 py-1 px-2 g-1">
+    <div className="cart-item my-1 py-1 px-2 g-1" >
       <img src={product.image} alt={product.title} className="m-1" />
       <div>
         <h3 className="f-2">{product.title.slice(0, 35)} ...</h3>

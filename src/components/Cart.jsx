@@ -1,7 +1,6 @@
 import { useRef, useContext } from "react";
 import CartItem from "./CartItem";
-import cartContext from "../contexts/cartContext";
-import productsContext from "../contexts/productsContext";
+import { cartContext } from "../contexts/CartContextProvider";
 
 const Cart = () => {
   const cartRef = useRef();
@@ -11,8 +10,7 @@ const Cart = () => {
     cartRef.current.style.padding = "0";
     document.body.style.overflowY = "scroll";
   };
-  const { cart } = useContext(cartContext);
-  const { products } = useContext(productsContext);
+  const { cart, products } = useContext(cartContext);
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
   const cartDetails = cart.map((item) => {
     const itemDetails = products.filter(

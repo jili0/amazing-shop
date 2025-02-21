@@ -1,20 +1,12 @@
-// Error: Rendered more hooks than during the previous render.
-// info von react doc: Do not call Hooks inside functions passed to useMemo, useReducer, or useEffect.
-// https://react.dev/warnings/invalid-hook-call-warning
-
 import { useParams, NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-
-import productsContext from "../contexts/productsContext";
-import cartContext from "../contexts/cartContext";
-import Cart from "../components/Cart.jsx";
+import { cartContext } from "../contexts/CartContextProvider.jsx";
 import { addToCart } from "../stores/cart.js";
 
 const Product = () => {
   const productParam = useParams();
-  const { products, setProducts } = useContext(productsContext);
-  const { cart, setCart } = useContext(cartContext);
+  const { products, setProducts, setCart } = useContext(cartContext);
 
   useEffect(() => {
     const fetchProducts = async () => {

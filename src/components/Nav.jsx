@@ -1,10 +1,10 @@
 import { useContext, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import cartContext from "../contexts/cartContext";
+import { cartContext } from "../contexts/CartContextProvider";
 import Cart from "./Cart";
 
 const Nav = () => {
-  const { cart, setCart } = useContext(cartContext);
+  const { cart } = useContext(cartContext);
   const cartRef = useRef();
   const toggleCart = () => {
     if (cartRef.current.firstChild.style.height === "0px") {

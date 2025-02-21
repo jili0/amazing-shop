@@ -4,13 +4,12 @@ import { useContext, useEffect } from "react";
 import ProductsCategories from "../components/ProductsCategories";
 import SingleCategory from "../components/SingleCategory";
 import About from "../components/About";
-import Cart from "../components/Cart.jsx";
-import productsContext from "../contexts/productsContext";
+import { cartContext } from "../contexts/CartContextProvider";
 
 const Products = () => {
   const categoryParam = useParams();
   const category = categoryParam.category;
-  const { products, setProducts } = useContext(productsContext);
+  const { products, setProducts } = useContext(cartContext);
   if (!products.length) {
     useEffect(() => {
       const fetchProducts = async () => {

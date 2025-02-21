@@ -1,10 +1,10 @@
 import { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import productsContext from "../contexts/productsContext";
+import { cartContext } from "../contexts/CartContextProvider.jsx";
 import Card from "./Card.jsx";
 
 const SingleCategory = ({ category }) => {
-  const { products, setProducts } = useContext(productsContext);
+  const { products, setProducts } = useContext(cartContext);
   if (!products.length) {
     useEffect(() => {
       const fetchProducts = async () => {

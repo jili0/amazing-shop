@@ -1,12 +1,10 @@
 import Hero from "../components/Hero.jsx";
 import Column from "../components/Column.jsx";
-import Cart from "../components/Cart.jsx";
 import { useEffect, useContext } from "react";
-import productsContext from "../contexts/productsContext.jsx";
-
+import { cartContext } from "../contexts/CartContextProvider.jsx";
 
 const Home = () => {
-  const {products, setProducts} = useContext(productsContext)
+  const { setProducts } = useContext(cartContext);
   useEffect(() => {
     const fetchProducts = async () => {
       const url = "https://fakestoreapi.com/products";

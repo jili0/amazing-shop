@@ -1,5 +1,4 @@
 const CartItem = ({product, quantity}) => {
-  console.log(product, quantity)
   return (
     <div className="cart-item my-1 py-1 px-2 g-1" >
       <img src={product.image} alt={product.title} className="m-1" />

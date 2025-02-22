@@ -19,6 +19,14 @@ const Cart = () => {
     const itemQuantity = item.quantity;
     return { itemDetails, itemQuantity };
   });
+  console.log(cartDetails);
+  const subtotal =
+    cartDetails.reduce(
+      (sum, item) => sum + item.itemDetails.price * 100 * item.itemQuantity,
+      0
+    ) / 100;
+  const shipping = totalItems ? 9 : 0;
+  const total = subtotal + shipping;
 
   return (
     <div
@@ -92,49 +100,26 @@ const Cart = () => {
         <div className="payment-info f-1 mb-1">
           <h3 className="f-2">Subtotal</h3>
           <p>
-            <span>
-              {totalItems
-                ? cartDetails.reduce(
-                    (sum, item) => sum + item.itemDetails.price * 100,
-                    0
-                  ) / 100
-                : 0}
-            </span>
+            <span>{subtotal}</span>
             &nbsp; €
           </p>
         </div>
         <div className="payment-info f-1 mb-1">
           <h3 className="f-2">Shipping</h3>
           <p>
-            <span>{totalItems ? 9 : 0}</span> €
+            <span>{shipping}</span> €
           </p>
         </div>
         <div className="payment-info f-1 mb-1">
           <h3 className="f-2">Total &#040;Tax incl.&#041;</h3>
           <p>
-            <span>
-              {totalItems
-                ? cartDetails.reduce(
-                    (sum, item) => sum + item.itemDetails.price * 100,
-                    0
-                  ) /
-                    100 +
-                  9
-                : 0}
-            </span>
+            <span>{total}</span>
             &nbsp; €
           </p>
         </div>
         <button className="py-2 px-3 my-2">
           <p>
-            <span>
-              {totalItems
-                ? cartDetails.reduce(
-                    (sum, item) => sum + item.itemDetails.price,
-                    0
-                  ) + 9
-                : 0}
-            </span>
+            <span>{total}</span>
             &nbsp; €
           </p>
           <p>Checkout &rarr;</p>

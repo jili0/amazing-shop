@@ -6,7 +6,7 @@ import { addToCart } from "../stores/cart.js";
 
 const Product = () => {
   const productParam = useParams();
-  const { products, setProducts, setCart } = useContext(cartContext);
+  const { products, setProducts, cart, setCart } = useContext(cartContext);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -52,17 +52,18 @@ const Product = () => {
     return "Loading...";
   }
 
-  const carts = useSelector((store) => store.cart.items);
-
-  const dispatch = useDispatch();
   const handleAddToCart = () => {
-    dispatch(
-      addToCart({
-        productId: filteredProduct.id,
-        quantity: 1,
-      })
-    );
-    setCart(carts);
+    setCart((cart) => {
+      if (cart.some((item) => item.productId === filteredProduct.id)) {
+        return cart.map((item) =>
+          item.productId === filteredProduct.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        return [...cart, { productId: filteredProduct.id, quantity: 1 }];
+      }
+    });
   };
 
   return (

@@ -19,7 +19,6 @@ const Cart = () => {
     const itemQuantity = item.quantity;
     return { itemDetails, itemQuantity };
   });
-  console.log(cartDetails);
   const subtotal =
     cartDetails.reduce(
       (sum, item) => sum + item.itemDetails.price * 100 * item.itemQuantity,

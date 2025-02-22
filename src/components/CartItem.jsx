@@ -1,15 +1,39 @@
-const CartItem = ({product, quantity}) => {
+import { cartContext } from "../contexts/CartContextProvider.jsx";
+import { useContext } from "react";
+
+const CartItem = ({ product, quantity }) => {
+  const { id, description, image, price, title } = product;
+  const { setCart } = useContext(cartContext);
+
+  const increaseQuantity = () => {
+    setCart((cart) => {
+      return cart.map((item) =>
+        item.productId === id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+    });
+  };
+  const decreaseQuantity = () => {
+    setCart((cart) => {
+      return cart.map((item) =>
+        item.productId === id ? { ...item, quantity: item.quantity - 1 } : item
+      );
+    });
+  };
+  const handleRemove = () => {
+    setCart((cart) => cart.filter((item) => item.productId !== id));
+  };
+
   return (
-    <div className="cart-item my-1 py-1 px-2 g-1" >
-      <img src={product.image} alt={product.title} className="m-1" />
+    <div className="cart-item my-1 py-1 px-2 g-1">
+      <img src={image} alt={title} className="m-1" />
       <div>
-        <h3 className="f-2">{product.title.slice(0, 35)} ...</h3>
-        <p className="f-1">{product.description.slice(0, 50)} ...</p>
+        <h3 className="f-2">{title.slice(0, 35)} ...</h3>
+        <p className="f-1">{description.slice(0, 50)} ...</p>
       </div>
       <div className="amount">
         <span>{quantity}</span>
         <div>
-          <button>
+          <button onClick={increaseQuantity}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="300 -680 360 180"
@@ -20,7 +44,7 @@ const CartItem = ({product, quantity}) => {
               <path d="m280-400 200-200 200 200H280Z" />
             </svg>
           </button>
-          <button>
+          <button onClick={decreaseQuantity}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="300 -460 360 180"
@@ -34,9 +58,9 @@ const CartItem = ({product, quantity}) => {
         </div>
       </div>
       <p className="nowrap">
-        <span>{product.price}</span> €
+        <span>{price}</span> €
       </p>
-      <button>
+      <button onClick={handleRemove}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="24px"

@@ -9,7 +9,6 @@ import Home from "../pages/Home.jsx";
 import Products from "../pages/Products.jsx";
 import Support from "../pages/Support.jsx";
 import Account from "../pages/Account.jsx";
-import Login from "../pages/Login.jsx";
 import Product from "../pages/Product.jsx";
 import NotFound from "../pages/NotFound.jsx";
 
@@ -22,7 +21,6 @@ const AppRouter = createBrowserRouter(
       <Route path="/products/:category/:id" element={<Product />} />
       <Route path="/support" element={<Support />} />
       <Route path="/account" element={<Account />} />
-      <Route path="/account/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )

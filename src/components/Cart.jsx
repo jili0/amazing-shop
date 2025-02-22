@@ -19,13 +19,14 @@ const Cart = () => {
     const itemQuantity = item.quantity;
     return { itemDetails, itemQuantity };
   });
+
   const subtotal =
     cartDetails.reduce(
       (sum, item) => sum + item.itemDetails.price * 100 * item.itemQuantity,
       0
     ) / 100;
   const shipping = totalItems ? 9 : 0;
-  const total = subtotal + shipping;
+  const total = (subtotal * 100 + shipping * 100) / 100;
 
   return (
     <div

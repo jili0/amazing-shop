@@ -4,25 +4,8 @@ import { cartContext } from "../contexts/CartContextProvider.jsx";
 import Card from "./Card.jsx";
 
 const SingleCategory = ({ category }) => {
-  const { products, setProducts } = useContext(cartContext);
-  if (!products.length) {
-    useEffect(() => {
-      const fetchProducts = async () => {
-        const url = "https://fakestoreapi.com/products";
-        try {
-          const res = await fetch(url);
-          if (!res.ok) {
-            throw new Error("Response is not ok");
-          }
-          const data = await res.json();
-          setProducts(data);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      fetchProducts();
-    }, []);
-  }
+  const { products } = useContext(cartContext);
+ 
   let categoryName;
   switch (category) {
     case "women":

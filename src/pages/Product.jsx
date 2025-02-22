@@ -6,26 +6,7 @@ import { addToCart } from "../stores/cart.js";
 
 const Product = () => {
   const productParam = useParams();
-  const { products, setProducts, cart, setCart } = useContext(cartContext);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const url = "https://fakestoreapi.com/products";
-      try {
-        const res = await fetch(url);
-        if (!res.ok) {
-          throw new Error("Response is not ok");
-        }
-        const data = await res.json();
-        setProducts(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    if (!products.length) {
-      fetchProducts();
-    }
-  }, []);
+  const { products, setCart } = useContext(cartContext);
 
   const filteredProduct = products.filter(
     (product) => product.id === Number(productParam.id)

@@ -1,5 +1,4 @@
 import contact from "../assets/contact.png";
-import Cart from "../components/Cart.jsx";
 
 const Support = () => {
   return (
@@ -8,7 +7,6 @@ const Support = () => {
         <img
           src={contact}
           alt="women using phone"
-          // width="150"
           className="mx-2 h-5"
         />
       </div>
